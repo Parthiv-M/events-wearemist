@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
-const RenderEvents = ({data}) => {
-  return (
-    <div>
-        {
-        data.map((event, index) => (
-          <ul>
-            <li key={index}>
-              {event.text}
-            </li>
-          </ul>
-        ))
-        }
-    </div>
-  );
-}
+import EventsCarousel from './components/Events';
 
 function App() {
   
@@ -33,8 +18,8 @@ function App() {
 
   return (
     <div className="App">
-      <h3>Hello</h3>
-      <RenderEvents data={data}/>
+      {/* <h3>Hello</h3> */}
+      <EventsCarousel data={data}/>
     </div>
   );
 }
