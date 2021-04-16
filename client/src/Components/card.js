@@ -39,7 +39,11 @@ const EventsCards = () =>
       {
           return(
             <Card style={{width:'250px', margin:'30px'}}>
-                <div className='container' style={{width: '70%', height: '60%', paddingTop:'20px'}}><Card.Img variant="top" src={item.src}/></div>
+                <div style={{backgroundColor:'#E8E8E8', height:'300px'}}>
+                    <div className='container' style={{width: '70%', height: '80%', paddingTop:'20px'}}>
+                        <Card.Img variant="top" src={item.src}/>
+                    </div>
+                </div>
                 <Card.Body>
                     <Card.Title>
                     <div>
