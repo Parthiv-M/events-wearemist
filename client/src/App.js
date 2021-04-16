@@ -4,6 +4,7 @@ import EventsCarousel from './components/Events';
 
 function App() {
   
+  // function to get data from json file
   const getData = async () => {
     const eventsData = await fetch('https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/data/events.json');
     const parsedEvents = await eventsData.json();    
@@ -18,7 +19,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h3>Hello</h3> */}
       <EventsCarousel data={data}/>
     </div>
   );

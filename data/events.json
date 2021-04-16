@@ -7,5 +7,14 @@
         "date": "12th April, 2021",
         "time": "18:00hr",
         "badges": [ "Blockchain", "Cryptocurrency" ]
+    },
+    {
+        "src": "https://s3-alpha-sig.figma.com/img/571c/ef50/9b5a1fcbaa72372cbfde73c83b4e913d?Expires=1619395200&Signature=TOA9wKv3ZnyFGMh5jrTOGhv0v-yb5aB8ech8q-4l~3xm8Njoj13R0eZ8RA2uGlGCRFs8T05z~0I1-xAuwjPUnPR1-bOB~DOpdAVGj4kXajCz7ZOFZVLSLTdT7~96v7vT1hxMYwZhIYv5xu06K4u7peiOOycuzlVYEcH1YoOrUMDXYVwIN~PyGoK1s6kAlHkOhhNcQFBuIF1M2ha4w8jcvbn2BwbdI1HDBGH8SWj3GFhUkyfB9l0Tnyrm8zsePL11VoDDpvS3JfaN90zE~SBfYdCbf8ytL4hCAgfGJpW8mpiPdN4Tl-7F7BR7uGafTfZi1oW9V-0Ejj0Skz4L0tYEKA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+        "name": "WebDev Webinar",
+        "platform": "Teams",
+        "speakers": [ "Parthiv Menon", "Aviral Gupta" ],
+        "date": "02 April, 2021",
+        "time": "17:30hr",
+        "badges": [ "WebDev" ]
     }
 ]
