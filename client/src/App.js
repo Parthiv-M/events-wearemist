@@ -20,7 +20,7 @@ const RenderEvents = ({data}) => {
 function App() {
   
   const getData = async () => {
-    const eventsData = await fetch('https://raw.githubusercontent.com/Parthiv-M/events-wearemist/parthiv/data/events.json');
+    const eventsData = await fetch('https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/data/events.json');
     const parsedEvents = await eventsData.json();    
     setEventsData(parsedEvents);
   }
