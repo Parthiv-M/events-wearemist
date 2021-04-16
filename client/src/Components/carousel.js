@@ -35,7 +35,7 @@ const EventsCarousel = () => {
       ];
     const slides = items.map((item) => {
         return (
-            <Carousel.Item style={{height:'100vh', width:'96vw', padding:'40px 0', backgroundColor:'#E8E8E8'}}>
+            <Carousel.Item style={{height:'90vh', width:'96vw', padding:'40px 0', backgroundColor:'#E8E8E8'}}>
                 <div style={{textAlign:'center'}}>
                     <img
                     src={item.src}
