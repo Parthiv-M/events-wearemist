@@ -5,6 +5,7 @@ import InfoText from './components/InfoText';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import Navbar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
   
@@ -35,6 +36,7 @@ function App() {
             </Col>
         </Row>
       <PastEvents data={data} />
+      <Footer />
     </div>
   );
 }

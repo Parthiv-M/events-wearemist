@@ -43,6 +43,18 @@
   margin: 50px;
 }
 
+.footer-md {
+  background-color: #111111;
+  height: 30vh; 
+  width: 100vw;
+  margin-top: 40px;
+}
+
+.footer-text-align-md{
+  text-align: left;
+  align-self: center;
+}
+
 @media only screen and (max-width: 700px){
   .text-align-sm {
     text-align: left;
@@ -55,6 +67,14 @@
   }
   .navbar-sm {
     margin: 0;
+  }
+  .footer-sm {
+    padding: 50px;
+    height: 70vh;
+  }
+  .footer-text-align-sm{
+    text-align: center;
+    margin-top: 20px;
   }
 }  
 
