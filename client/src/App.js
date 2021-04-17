@@ -13,10 +13,20 @@ function App() {
   const getData = async () => {
     const eventsData = await fetch('https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/data/events.json');
     const parsedEvents = await eventsData.json();    
-    setEventsData(parsedEvents);
+    // function to get upcoming events
+    let upcoming = parsedEvents.filter((event) => {
+      return new Date(event.filterDate.split('-')[0], event.filterDate.split('-')[1]-1, event.filterDate.split('-')[2]) > Date.now()
+    });
+    setUpcomingData(upcoming);
+    // function to get past events
+    let past = parsedEvents.filter((event) => {
+      return new Date(event.filterDate.split('-')[0], event.filterDate.split('-')[1]-1, event.filterDate.split('-')[2]) < Date.now()
+    });
+    setPastData(past);
   }
 
-  const [data, setEventsData] = useState([]);
+  const [upcomingData, setUpcomingData] = useState([]);
+  const [pastData, setPastData] = useState([]);
 
   useEffect(() => {  
       getData();
@@ -26,7 +36,7 @@ function App() {
     <div className="App">
       <Navbar />
       <InfoText />
-      <UpcomingEvents data={data} />
+      <UpcomingEvents data={upcomingData} />
       <Row className='padding-md padding-sm'>
             <Col md={12} style={{ fontSize: '1.5rem', textAlign: 'left' }}>
             <div className='title-md title-sm'>
@@ -35,7 +45,7 @@ function App() {
             </div>
             </Col>
         </Row>
-      <PastEvents data={data} />
+      <PastEvents data={pastData} />
       <Footer />
     </div>
   );

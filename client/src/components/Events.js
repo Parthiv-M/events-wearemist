@@ -148,7 +148,7 @@ const PastEvents = ({data}) => {
     const eventCard = data.map((event, index) => 
       {
           return(
-            <Col md={3} sm={12}>
+            <Col md={6} sm={12}>
             <Card style={{ height: 'fitContent' }}>
                 <div style={{ backgroundColor:'#E8E8E8' }}>
                 <div style={{ height: 'fitContent' }}>
