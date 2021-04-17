@@ -5,8 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const EventsNavBar = () => {
     return (
-        <Navbar bg="dark" fixed='top' variant="dark" className='navbar-md navbar-sm'>
-          <Navbar.Brand style={{display: 'flex'}}>
+        <Navbar fixed='top' className='navbar-md navbar-sm'>
+          <Navbar.Brand style={{ display: 'flex' }}>
             <img
               alt=""
               src={logo}

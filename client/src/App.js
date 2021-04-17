@@ -29,9 +29,9 @@ function App() {
       <UpcomingEvents data={data} />
       <Row className='padding-md padding-sm'>
             <Col md={12} style={{ fontSize: '1.5rem', textAlign: 'left' }}>
-            <div className='title-md'>
+            <div className='title-md title-sm'>
                 PAST EVENTS
-                <div style={{ flexGrow: 1, borderBottom: '3px solid #3c3c3c' }}></div>
+                <div style={{ flexGrow: 1, borderBottom: '4px solid #3c3c3c' }}></div>
             </div>
             </Col>
         </Row>
