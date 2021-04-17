@@ -148,9 +148,10 @@ const PastEvents = ({data}) => {
     const eventCard = data.map((event, index) => 
       {
           return(
-            <Card>
+            <Col md={3} sm={12}>
+            <Card style={{ height: 'fitContent' }}>
                 <div style={{ backgroundColor:'#E8E8E8' }}>
-                <div style={{height: 'fitContent'}}>
+                <div style={{ height: 'fitContent' }}>
                     <Card.Img variant="top" src={event.src} />
                 </div>
                 </div>
@@ -170,15 +171,16 @@ const PastEvents = ({data}) => {
                     </Card.Text>
                 </Card.Body>
           </Card>
+          </Col>
           )
       })
 
       return(
-          <div className='card-deck' style={{ display: 'flex', justifyContent: 'center' }}>
-            <CardDeck style={{ margin:'5px' }}>
-                {eventCard}
-            </CardDeck>
-          </div>
+            <Row className='p-md-5'>
+                <CardDeck>
+                    {eventCard}
+                </CardDeck>
+            </Row>
         );
 }
 
