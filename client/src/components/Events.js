@@ -13,7 +13,7 @@ const UpcomingEvents = ({data}) => {
     const carouselSlide = data.map((event) => {
 
         return (
-            <Carousel.Item style={{ height:'fitContent', width:'96vw', padding:'40px 0', backgroundColor:'#E8E8E8' }}>
+            <Carousel.Item style={{ height:'fitContent', width:'96vw' }}>
                 <Row >
                     <img
                     src={event.src}
@@ -21,20 +21,20 @@ const UpcomingEvents = ({data}) => {
                     class="center"
                     />
                 </Row>
-                <Carousel.Caption style={{ height: 'fitContent'}}>
+                <Carousel.Caption style={{ height:'fitContent'}}>
                     <Row>
-                        <Col sm={12} md={8} className=' text-align-left-md text-align-sm' style={{ fontWeight: 'bold', fontSize: '2.5rem', color: '#3c3c3c' }}>
+                        <Col sm={12} md={8} className='text-align-left-md text-align-sm name' style={{ fontWeight: 'bold', color: '#3c3c3c' }}>
                             { event.name }
                         </Col>
-                        <Col sm={12} md={4} className='text-align-right-md text-align-sm' style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#3c3c3c' }}>
-                            <span style={{ fontSize:'2rem' }}><FeatherIcon icon='map-pin' size='35px' style={{ margin:'10px' }}/>
+                        <Col sm={12} md={4} className='text-align-right-md text-align-sm platform' style={{ fontWeight: 'bold', color: '#3c3c3c' }}>
+                            <span ><FeatherIcon icon='map-pin' size='35px' style={{ margin:'10px' }}/>
                                 {event.platform}
                             </span>
                         </Col>
                     </Row>
                     <hr style={{ color:'black', backgroundColor:'black', height:'2px' }}/>
                     <Row>
-                        <Col sm={12} md={8} className='text-align-left-md text-align-sm' style={{fontWeight: 'bold', fontSize: '1.8rem', color: '#3c3c3c' }}>
+                        <Col sm={12} md={8} className='text-align-left-md text-align-sm speaker' style={{fontWeight: 'bold', color: '#3c3c3c' }}>
                             { event.speakers.map((speaker) =>
                                 {
                                     return(
@@ -46,7 +46,7 @@ const UpcomingEvents = ({data}) => {
                                     )
                             })}
                         </Col>
-                        <Col sm={12} md={4} className='text-align-right-md text-align-sm' style={{ fontSize:'1.5rem'}}>
+                        <Col sm={12} md={4} className='text-align-right-md text-align-sm details'>
                             <span>
                                 {event.date}{', '}
                                 {event.time}
@@ -62,9 +62,9 @@ const UpcomingEvents = ({data}) => {
                             event.badges.map((badge) =>
                             {
                                 return(
-                                    <span style={{ fontSize:'30px', paddingRight: '8px' }}>
-                                        <Badge pill variant="primary" style={{ backgroundColor:'#808080', padding: '15px' }}>
-                                            {badge}
+                                    <span className="badge">
+                                        <Badge pill variant="primary" style={{ backgroundColor:'#808080', padding: '15px', justifyContent:'center' }}>
+                                            {badge}<span style={{ display:'inline-block', width:'20px' }}></span>
                                         </Badge>
                                     </span>
                                 )
