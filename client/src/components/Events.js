@@ -98,7 +98,7 @@ const PastEvents = ({data}) => {
                     {data.name}
                 </Col>
                 <Col md={4} sm={12} className='text-align-right-md text-align-sm'>
-                    <FeatherIcon icon='map-pin' style={{ marginRight: 7 }}/>
+                    <FeatherIcon icon='map-pin' style={{ marginRight: 7, color: 'red' }}/>
                     <span>{data.platform}</span>
                 </Col>
             </Row>
