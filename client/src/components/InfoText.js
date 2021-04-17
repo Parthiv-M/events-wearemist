@@ -6,10 +6,10 @@ import Row from 'react-bootstrap/esm/Row';
 const InfoText = () => {
     return (
         <Row className='padding-md padding-sm'>
-            <Col md={12} style={{ fontSize: '1.6rem', textAlign: 'left' }}>
-                <div className='title-md'>
+            <Col md={12} className='info-md info-sm' style={{ textAlign: 'left' }}>
+                <div className='title-md title-sm'>
                     EVENTS
-                    <div style={{ flexGrow: 1, borderBottom: '3px solid #3c3c3c' }}></div>
+                    <div style={{ flexGrow: 1, borderBottom: '4px solid #3c3c3c' }}></div>
                 </div>
                 <br />
                     This page kees a tab of the all the events Manipal Information Security Team conducts for cybersecurity 
