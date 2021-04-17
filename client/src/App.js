@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import EventsCarousel from './components/Events';
+import { PastEvents, UpcomingEvents } from './components/Events';
 
 function App() {
   
@@ -19,7 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      <EventsCarousel data={data}/>
+      <UpcomingEvents data={data} />
+      <PastEvents data={data} />
     </div>
   );
 }

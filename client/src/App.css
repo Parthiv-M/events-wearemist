@@ -12,3 +12,18 @@
 .carousel-indicators {
   filter: invert(100%);
 }
+
+.text-align-left-md {
+  text-align: left;
+}
+
+.text-align-right-md {
+  text-align: right;
+}
+
+@media only screen and (max-width: 700px){
+  .text-align-sm {
+    text-align: left;
+  }
+}  
+
