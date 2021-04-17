@@ -11,40 +11,42 @@ import './../App.css';
 // carousel for upcoming events
 const UpcomingEvents = ({data}) => {
     const carouselSlide = data.map((event) => {
+
         return (
-            <Carousel.Item style={{ height:'90vh', width:'90vw', padding:'40px 0', backgroundColor:'#E8E8E8' }}>
-                <img
+            <Carousel.Item style={{ height:'fitContent', width:'96vw', padding:'40px 0', backgroundColor:'#E8E8E8' }}>
+                <Row >
+                    <img
                     src={event.src}
                     alt={event.name}
-                    width="500px"
                     class="center"
-                />
-                <Carousel.Caption style={{ paddingTop:'50px' }}>
-                    <div style={{ display: 'flex', flexFlow: 'row wrap', alignContent: 'space-between' }}>
-                        <h3 style={{ textAlign:'left', fontWeight: "bold", fontSize: '3rem' }}>
+                    />
+                </Row>
+                <Carousel.Caption style={{ height: 'fitContent'}}>
+                    <Row>
+                        <Col sm={12} md={8} className=' text-align-left-md text-align-sm' style={{ fontWeight: 'bold', fontSize: '2.5rem', color: '#3c3c3c' }}>
                             { event.name }
-                            <span style={{ display:'inline-block', width:'100px' }}></span> 
-                        </h3>
-                        <div style={{ flexGrow: 1 }}></div>
-                        <span style={{ fontSize:'2rem' }}><FeatherIcon icon='map-pin' size='35px' style={{ margin:'10px' }}/>
-                            {event.platform}
-                        </span>
-                    </div>
+                        </Col>
+                        <Col sm={12} md={4} className='text-align-right-md text-align-sm' style={{ fontWeight: 'bold', fontSize: '1.5rem', color: '#3c3c3c' }}>
+                            <span style={{ fontSize:'2rem' }}><FeatherIcon icon='map-pin' size='35px' style={{ margin:'10px' }}/>
+                                {event.platform}
+                            </span>
+                        </Col>
+                    </Row>
                     <hr style={{ color:'black', backgroundColor:'black', height:'2px' }}/>
                     <Row>
-                        <Col sm={12} md={8} style={{ textAlign: 'left', fontWeight: 'bold', fontSize: '2rem', color: '#3c3c3c' }}>
+                        <Col sm={12} md={8} className='text-align-left-md text-align-sm' style={{fontWeight: 'bold', fontSize: '1.8rem', color: '#3c3c3c' }}>
                             { event.speakers.map((speaker) =>
                                 {
                                     return(
                                         <>
                                             <span>
-                                            {speaker}
+                                            {speaker} <span style={{ display:'inline-block', width:'20px' }}></span> 
                                             </span>
                                         </>
                                     )
                             })}
                         </Col>
-                        <Col sm={12} md={4} style={{ fontSize:'20px', textAlign: 'right' }}>
+                        <Col sm={12} md={4} className='text-align-right-md text-align-sm' style={{ fontSize:'1.5rem'}}>
                             <span>
                                 {event.date}{', '}
                                 {event.time}
