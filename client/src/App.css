@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   overflow: hidden;
 }
 
@@ -18,9 +17,17 @@
   padding-left: auto;
   padding-right: auto;
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
 
 .carousel-control-next,
 .carousel-control-prev,
@@ -48,7 +55,7 @@
 }
 
 .title-md {
-  font-size: 2.7rem;
+  font-size: 2.8rem;
   display: flex;
   flex-flow: row;
   font-weight: bold;
@@ -62,7 +69,6 @@
 .footer-md {
   background-color: #111111;
   height: 30vh;
-  width: 100vw;
   margin-top: 40px;
 }
 
@@ -71,36 +77,29 @@
   align-self: center;
 }
 
-.name {
-  font-size: 2.5rem;
+.head-size-md{
+  font-size: 2.4rem;
 }
-.platform {
-  font-size: 2rem;
-}
-.speaker {
+
+.non-head-size-md {
   font-size: 1.8rem;
 }
-.details {
-  font-size: 1.5rem;
-}
-.badge {
-  font-size: 1.8rem;
-}
+
 .carousel-caption {
   padding: 50px 200px;
 }
 
-.title-sm {
-  font-size: 1.8rem;
-}
 .info-md {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
-@media only screen and (max-width: 700px) {
-  .info-md {
-    font-size: 1.3rem;
-  }
 
+@media only screen and (max-width: 700px) {
+  .info-sm {
+    font-size: 1rem;
+  }
+  .title-sm{
+    font-size: 1.8rem;
+  }
   .text-align-sm {
     text-align: left;
   }
@@ -124,19 +123,20 @@
   .carousel-caption {
     padding: 50px 20px;
   }
-  .name {
-    font-size: 1.8rem;
+  .head-size-sm {
+    font-size: 1.7rem;
   }
-  .platform {
-    font-size: 1.5rem;
+  .non-head-size-md {
+    font-size: 1.2rem;
   }
-  .speaker {
-    font-size: 1.5rem;
+  .carousel-control-next,
+  .carousel-control-prev{
+    display: none;
   }
-  .details {
-    font-size: 1.3rem;
-  }
-  .badge {
-    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 820px){
+  .card-deck{
+    flex-flow: column;
   }
 }

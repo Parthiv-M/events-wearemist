@@ -10,23 +10,23 @@ import './../App.css';
 
 // carousel for upcoming events
 const UpcomingEvents = ({data}) => {
-    const carouselSlide = data.map((event) => {
+    const carouselSlide = data.map((event, index) => {
 
         return (
-            <Carousel.Item style={{ height:'fitContent', width:'96vw' }}>
-                <Row >
+            <Carousel.Item key={index} style={{ height:'fitContent', width:'96vw' }}>
+                <Row>
                     <img
                     src={event.src}
                     alt={event.name}
-                    class="center"
+                    className="center"
                     />
                 </Row>
                 <Carousel.Caption style={{ height:'fitContent'}}>
                     <Row>
-                        <Col sm={12} md={8} className='text-align-left-md text-align-sm name' style={{ fontWeight: 'bold', color: '#3c3c3c' }}>
+                        <Col sm={12} md={8} className='text-align-left-md text-align-sm head-size-md head-size-sm' style={{ fontWeight: 'bold', color: '#111111' }}>
                             { event.name }
                         </Col>
-                        <Col sm={12} md={4} className='text-align-right-md text-align-sm platform' style={{ fontWeight: 'bold', color: '#3c3c3c' }}>
+                        <Col sm={12} md={4} className='text-align-right-md text-align-sm head-size-md head-size-sm' style={{ fontWeight: 'bold', color: '#3c3c3c' }}>
                             <span ><FeatherIcon icon='map-pin' size='35px' style={{ margin:'10px' }}/>
                                 {event.platform}
                             </span>
@@ -34,19 +34,19 @@ const UpcomingEvents = ({data}) => {
                     </Row>
                     <hr style={{ color:'black', backgroundColor:'black', height:'2px' }}/>
                     <Row>
-                        <Col sm={12} md={8} className='text-align-left-md text-align-sm speaker' style={{fontWeight: 'bold', color: '#3c3c3c' }}>
-                            { event.speakers.map((speaker) =>
+                        <Col sm={12} md={8} className='text-align-left-md text-align-sm non-head-size-md non-head-size-sm' style={{fontWeight: 'bold', color: '#3c3c3c' }}>
+                            { event.speakers.map((speaker, index) =>
                                 {
                                     return(
                                         <>
-                                            <span>
+                                            <span key={index}>
                                             {speaker} <span style={{ display:'inline-block', width:'20px' }}></span> 
                                             </span>
                                         </>
                                     )
                             })}
                         </Col>
-                        <Col sm={12} md={4} className='text-align-right-md text-align-sm details'>
+                        <Col sm={12} md={4} className='text-align-right-md text-align-sm non-head-size-md non-head-size-sm'>
                             <span>
                                 {event.date}{', '}
                                 {event.time}
@@ -59,12 +59,12 @@ const UpcomingEvents = ({data}) => {
                     <br/>
                     <div style={{textAlign:'left'}}>
                         {
-                            event.badges.map((badge) =>
+                            event.badges.map((badge, index) =>
                             {
                                 return(
-                                    <span className="badge">
-                                        <Badge pill variant="primary" style={{ backgroundColor:'#808080', padding: '15px', justifyContent:'center' }}>
-                                            {badge}<span style={{ display:'inline-block', width:'20px' }}></span>
+                                    <span key={index} className="non-head-size-md non-head-size-md">
+                                        <Badge pill variant="primary" style={{ backgroundColor:'#808080', padding: '15px', marginTop: 5, marginRight: 5, justifyContent:'center' }}>
+                                            {badge}<span style={{ width:'20px' }}></span>
                                         </Badge>
                                     </span>
                                 )
@@ -108,11 +108,11 @@ const PastEvents = ({data}) => {
     // speakers and time of the event
     const SpeakerTime = ({data}) => {
         return (
-            <Row>
+            <Row style={{height: 80}}>
                 <Col sm={12} md={8} className='text-align-left-md text-align-sm'>
-                    { data.speakers.map((speaker) => {
+                    { data.speakers.map((speaker, index) => {
                         return(
-                            <span style={{ fontSize: '1.3rem', color: 'gray' }}>{speaker} </span>
+                            <span key={index} style={{ fontSize: '1.3rem', color: 'gray' }}>{speaker} </span>
                         )
                         })
                     }
@@ -129,10 +129,10 @@ const PastEvents = ({data}) => {
         return (
             <React.Fragment>
                 {
-                    data.badges.map((badge) =>
+                    data.badges.map((badge, index) =>
                     {
                         return(
-                                <Col md={3} style={{ marginRight: 5, marginTop: 7 }} >
+                                <Col key={index} md={3} style={{ marginRight: 5, marginTop: 7 }} >
                                     <Badge pill variant="secondary" style={{ padding: 10, fontSize: '1rem' }}>
                                         {badge}
                                     </Badge>
@@ -145,7 +145,7 @@ const PastEvents = ({data}) => {
     }
 
     // event card
-    const eventCard = data.map((event) => 
+    const eventCard = data.map((event, index) => 
       {
           return(
             <Card>
@@ -174,8 +174,8 @@ const PastEvents = ({data}) => {
       })
 
       return(
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <CardDeck style={{margin:'10px'}}>
+          <div className='card-deck' style={{ display: 'flex', justifyContent: 'center' }}>
+            <CardDeck style={{ margin:'5px' }}>
                 {eventCard}
             </CardDeck>
           </div>
