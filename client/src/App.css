@@ -11,10 +11,22 @@
   color: #3c3c3c;
 }
 
+<<<<<<< HEAD
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+=======
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+>>>>>>> 43bdbdcbe9e1c658be26efd7c570e78ae96dce05
 }
 
 .carousel-control-next,
@@ -51,12 +63,16 @@
 
 .navbar-md {
   margin: 50px;
+  background-color: #111111;
 }
 
 .footer-md {
   background-color: #111111;
   height: 30vh;
+<<<<<<< HEAD
   width: 100vw;
+=======
+>>>>>>> 43bdbdcbe9e1c658be26efd7c570e78ae96dce05
   margin-top: 40px;
 }
 
@@ -65,7 +81,15 @@
   align-self: center;
 }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 700px) {
+=======
+.info-md {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 700px){
+>>>>>>> 43bdbdcbe9e1c658be26efd7c570e78ae96dce05
   .text-align-sm {
     text-align: left;
   }
@@ -86,6 +110,7 @@
     text-align: center;
     margin-top: 20px;
   }
+<<<<<<< HEAD
   .carousel-caption {
     padding: 0 20px;
   }
@@ -95,3 +120,13 @@
     padding: 0 200px;
   }
 }
+=======
+  .title-sm {
+    font-size: 1.8rem;
+  }
+  .info-md {
+    font-size: 1rem;
+  }
+}  
+
+>>>>>>> 43bdbdcbe9e1c658be26efd7c570e78ae96dce05
