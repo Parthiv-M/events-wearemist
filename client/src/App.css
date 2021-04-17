@@ -4,17 +4,27 @@
 }
 
 /* import font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #3c3c3c;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel-control-next,
 .carousel-control-prev,
 .carousel-indicators {
   filter: invert(100%);
+}
+
+.carousel-caption {
+  position: static;
 }
 
 .text-align-left-md {
@@ -45,17 +55,17 @@
 
 .footer-md {
   background-color: #111111;
-  height: 30vh; 
+  height: 30vh;
   width: 100vw;
   margin-top: 40px;
 }
 
-.footer-text-align-md{
+.footer-text-align-md {
   text-align: left;
   align-self: center;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .text-align-sm {
     text-align: left;
   }
@@ -72,9 +82,16 @@
     padding: 50px;
     height: 70vh;
   }
-  .footer-text-align-sm{
+  .footer-text-align-sm {
     text-align: center;
     margin-top: 20px;
   }
-}  
-
+  .carousel-caption {
+    padding: 0 20px;
+  }
+}
+@media only screen and (min-width: 701px) {
+  .carousel-caption {
+    padding: 0 200px;
+  }
+}
