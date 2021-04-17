@@ -38,5 +38,15 @@
         "time": "14:00hr",
         "badges": [ "Blockchain", "Cryptocurrency" ],
         "filterDate": "2021-04-19"
+    },
+    {
+        "src": "https://s3-alpha-sig.figma.com/img/eb0a/0f54/a2f897f34533d70093e7e4b3b05c4d0f?Expires=1619395200&Signature=YW8HVNVzmYrrT6qe4-2o4Oz5RDe9o3yjecIgsDxdIMKddKgo3Y4eFAFx3lr4usGSlHhKfY1tCnTzwGjbIcZM95lPYshEAcvdr7bi1nDUOUn4e8JnQS7eUk~9v4FLG~J4FhoxGs7qJBQd01oJgXOqRMrWDKFDdppsqhjS71JdKK4wQForZtTszOoO9cXaixtE~9ikrhUO913R1SZuzgBU6BMSuWKpcYEj071wYGwXvEII-xq9AZ4NBPRh8btBm73pw~6YHD7OSdJNdkGKoJCI-bmdQUhdwVhejbDB-KJjbS314q3Mxr~xWBVRRCNwLt~1EsvN7NE936vaPQJNYSWZhw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+        "name": "DogeCoin",
+        "platform": "Teams",
+        "speakers": [ "Shrenik Kalambur" ],
+        "date": "19th April, 2021",
+        "time": "13:00hr",
+        "badges": [ "Blockchain", "Cryptocurrency" ],
+        "filterDate": "2021-04-19"
     }
 ]
