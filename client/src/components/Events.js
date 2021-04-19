@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import FeatherIcon from 'feather-icons-react';
 import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
 import './../App.css';
 
 // carousel for upcoming events
@@ -132,11 +131,9 @@ const PastEvents = ({data}) => {
                     data.badges.map((badge, index) =>
                     {
                         return(
-                                <Col key={index} md={3} style={{ marginRight: 5, marginTop: 7 }} >
-                                    <Badge pill variant="secondary" style={{ padding: 10, fontSize: '1rem' }}>
-                                        {badge}
-                                    </Badge>
-                                </Col>
+                            <Badge className='ml-2' pill variant="secondary" style={{ padding: 10, fontSize: '1rem' }}>
+                                {badge}
+                            </Badge>
                         )
                     })
                 }
@@ -148,8 +145,7 @@ const PastEvents = ({data}) => {
     const eventCard = data.map((event, index) => 
       {
           return(
-            <Col md={6} sm={12}>
-            <Card style={{ height: 'fitContent' }}>
+            <Card key={index} style={{ margin: 15, width: 460, height: 'fitContent' }}>
                 <div style={{ backgroundColor:'#E8E8E8' }}>
                 <div style={{ height: 'fitContent' }}>
                     <Card.Img variant="top" src={event.src} />
@@ -164,22 +160,19 @@ const PastEvents = ({data}) => {
                         <SpeakerTime data={event}/>
                         <br/>
                         <div style={{ textAlign:'left' }}>
-                        <Row>
+                        <Row className='pl-2 justify-content-left'>
                             <Badges data={event}/>
                         </Row>
                         </div>
                     </Card.Text>
                 </Card.Body>
           </Card>
-          </Col>
           )
       })
 
       return(
-            <Row className='p-md-5'>
-                <CardDeck>
-                    {eventCard}
-                </CardDeck>
+            <Row className='p-md-5 justify-content-center'>
+                {eventCard}
             </Row>
         );
 }
