@@ -145,7 +145,7 @@ const PastEvents = ({data}) => {
     const eventCard = data.map((event, index) => 
       {
           return(
-            <Card key={index} style={{ margin: 15, width: 460, height: 'fitContent' }}>
+            <Card key={index} style={{ margin: 10, width: 460, height: 'fitContent' }}>
                 <div style={{ backgroundColor:'#E8E8E8' }}>
                 <div style={{ height: 'fitContent' }}>
                     <Card.Img variant="top" src={event.src} />
@@ -171,7 +171,7 @@ const PastEvents = ({data}) => {
       })
 
       return(
-            <Row className='p-md-5 justify-content-center'>
+            <Row className='p-md-5 align-items-center justify-content-center'>
                 {eventCard}
             </Row>
         );

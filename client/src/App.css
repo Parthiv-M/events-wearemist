@@ -29,6 +29,12 @@ body {
   scrollbar-width: none; 
 }
 
+.info-md {
+  font-size: 1.6rem;
+}
+
+/* carousel design */
+
 .carousel-control-next,
 .carousel-control-prev,
 .carousel-indicators {
@@ -37,6 +43,10 @@ body {
 
 .carousel-caption {
   position: static;
+}
+
+.carousel-caption {
+  padding: 50px 200px;
 }
 
 .text-align-left-md {
@@ -85,19 +95,11 @@ body {
   font-size: 1.8rem;
 }
 
-.carousel-caption {
-  padding: 50px 200px;
-}
-
-.info-md {
-  font-size: 1.6rem;
-}
-
 .card-md{
   padding: 60px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .info-sm {
     font-size: 1rem;
   }
@@ -141,4 +143,3 @@ body {
     padding: 0px;
   }
 }
-
