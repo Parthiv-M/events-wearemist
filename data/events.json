@@ -1,25 +1,5 @@
 [
     {
-        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/cybersecForEveryone.jpeg",
-        "name": "Cybersecurity for Everyone",
-        "platform": "MS Teams",
-        "speakers": [ "Dinesh O. Bareja" ],
-        "date": "20 September 2020",
-        "time": "17:45",
-        "badges": [ "Cybersecurity", "Webinar" ],
-        "filterDate": "2020-07-20"
-    },
-    {
-        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/turing.jpg",
-        "name": "Turing",
-        "platform": "TechTatva",
-        "speakers": [ ],
-        "date": "05 November 2020",
-        "time": "17:00",
-        "badges": [ "CTRL+C", "CTF", "Smoked" ],
-        "filterDate": "2020-11-05"
-    },
-    {
         "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/blockChain.jpeg",
         "name": "Blockchain Workshop",
         "platform": "Discord",
@@ -38,6 +18,26 @@
         "time": "18:00",
         "badges": [ "Forensics", "Web Exploits", "Hands-on" ],
         "filterDate": "2021-01-16"
+    },
+    {
+        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/turing.jpg",
+        "name": "Turing",
+        "platform": "TechTatva",
+        "speakers": [ ],
+        "date": "05 November 2020",
+        "time": "17:00",
+        "badges": [ "CTRL+C", "CTF", "Smoked" ],
+        "filterDate": "2020-11-05"
+    },
+    {
+        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/cybersecForEveryone.jpeg",
+        "name": "Cybersecurity for Everyone",
+        "platform": "MS Teams",
+        "speakers": [ "Dinesh O. Bareja" ],
+        "date": "20 September 2020",
+        "time": "17:45",
+        "badges": [ "Cybersecurity", "Webinar" ],
+        "filterDate": "2020-07-20"
     },
     {
         "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/dataPrivacy.jpeg",
