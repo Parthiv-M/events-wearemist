@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/esm/Col';
 import { Instagram, GitHub, Linkedin} from 'react-feather';
-import Item from 'antd/lib/list/Item'
 
 function Credits() {
     const [show, setShow] = useState(false);
@@ -28,7 +27,7 @@ function Credits() {
             id:'1',
             name:"Parthiv Menon",
             profession:"Developer, Designer",
-            description:"Full stack web developer",
+            description:"Full Stack Web Developer",
             imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLAFXK2MihEQSj_Udwnn1-lH6BDzU8cjq2JA&usqp=CAU",
             instahref:"https://www.instagram.com/sudo.mist/",
             linkedinhref:"https://www.linkedin.com/company/manipal-information-security-team",
@@ -38,7 +37,7 @@ function Credits() {
             id:'2',
             name:"Pal Chheda",
             profession:"Developer",
-            description:"Chechi: THE BOSS LADY",
+            description:"Front-End Web Developer",
             imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLAFXK2MihEQSj_Udwnn1-lH6BDzU8cjq2JA&usqp=CAU",
             instahref:"https://www.instagram.com/sudo.mist/",
             linkedinhref:"https://www.linkedin.com/company/manipal-information-security-team",
@@ -82,12 +81,12 @@ function Credits() {
                             {item.description}
                         </div>
                         <Row style={{justifyContent:'center'}}>
-                            <Col xs={4} md={2} className='my-3'>
+                            <Col xs={4} md={2} className='my-3' style={{paddingRight:'60px'}}>
                                 <a target="_blank" rel="noreferrer" href={item.instahref}>
                                     <Instagram onMouseEnter={() => onHover(item.id+1)} onMouseLeave={noHover} size={30} color={ hover && index===(item.id+1) ? '#009dff' : '#e3e5e5' }/>
                                 </a>
                             </Col>
-                            <Col xs={4} md={2} className='my-3'>
+                            <Col xs={4} md={2} className='my-3' style={{paddingRight:'60px'}}>
                                 <a target="_blank" rel="noreferrer" href={item.linkedinhref}>
                                     <Linkedin onMouseEnter={() => onHover(item.id+2)} onMouseLeave={noHover} size={30} color={ hover && index===(item.id+2) ? '#009dff' : '#e3e5e5' }/>
                                 </a>
@@ -105,7 +104,7 @@ function Credits() {
       })
         return (
         <>
-            <Button style={{ color: '#009dff', backgroundColor: 'transparent', border: 'none'}} ref={target} onClick={() => setShow(!show)}>Find us</Button>
+            <Button style={{ color: '#009dff', backgroundColor: 'transparent', border: 'none', fontSize:'20px'}} ref={target} onClick={() => setShow(!show)}>Find us</Button>
             <Overlay target={target.current} show={show}>
             {({ arrowProps, show: _show, popper, ...props }) => (
                 <div
