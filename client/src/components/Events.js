@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
-import FeatherIcon from 'feather-icons-react';
+import { MapPin } from 'react-feather';
 import Card from 'react-bootstrap/Card';
 import './../App.css';
 
@@ -26,7 +26,8 @@ const UpcomingEvents = ({data}) => {
                             { event.name }
                         </Col>
                         <Col sm={12} md={4} className='text-align-right-md text-align-sm head-size-md head-size-sm' style={{ fontWeight: 'bold', color: '#3c3c3c' }}>
-                            <span ><FeatherIcon icon='map-pin' size='35px' style={{ margin:'10px' }}/>
+                            <span >
+                                <MapPin style={{ margin: 7 }}/>
                                 {event.platform}
                             </span>
                         </Col>
@@ -93,11 +94,11 @@ const PastEvents = ({data}) => {
     const CardTitle = ({data}) => {
         return (
             <Row>
-                <Col md={8} sm={12}>
+                <Col md={7} sm={12} style={{ height: 50, fontSize: '1.3rem', fontWeight: 'bold' }}>
                     {data.name}
                 </Col>
-                <Col md={4} sm={12} className='text-align-right-md text-align-sm'>
-                    <FeatherIcon icon='map-pin' style={{ marginRight: 7, color: 'red' }}/>
+                <Col md={5} sm={12} className='text-align-right-md text-align-sm'>
+                    <MapPin style={{ marginRight: 7 }}/>
                     <span>{data.platform}</span>
                 </Col>
             </Row>
@@ -107,7 +108,7 @@ const PastEvents = ({data}) => {
     // speakers and time of the event
     const SpeakerTime = ({data}) => {
         return (
-            <Row style={{height: 80}}>
+            <Row style={{ height: 80 }}>
                 <Col sm={12} md={8} className='text-align-left-md text-align-sm'>
                     { data.speakers.map((speaker, index) => {
                         return(
@@ -117,7 +118,7 @@ const PastEvents = ({data}) => {
                     }
                 </Col>
                 <Col sm={12} md={4} className='text-align-right-md text-align-sm'>
-                    <span>{data.date}{' '}{data.time}</span>
+                    <span style={{fontWeight: 'bold'}}>{data.date}</span><br /><span>{data.time}</span>
                 </Col>
             </Row>
         );
@@ -145,7 +146,7 @@ const PastEvents = ({data}) => {
     const eventCard = data.map((event, index) => 
       {
           return(
-            <Card key={index} style={{ margin: 10, width: 460, height: 'fitContent' }}>
+            <Card key={index} style={{ margin: 10, width: 460, height: 730 }}>
                 <div style={{ backgroundColor:'#E8E8E8' }}>
                 <div style={{ height: 'fitContent' }}>
                     <Card.Img variant="top" src={event.src} />

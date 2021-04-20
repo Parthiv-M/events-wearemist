@@ -99,6 +99,13 @@ body {
   padding: 60px;
 }
 
+/* social media handles */
+
+.social-margin-md{
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
 @media only screen and (max-width: 768px) {
   .info-sm {
     font-size: 1rem;
@@ -120,7 +127,7 @@ body {
   }
   .footer-sm {
     padding: 50px;
-    height: 70vh;
+    height: 80vh;
   }
   .footer-text-align-sm {
     text-align: center;
@@ -141,5 +148,8 @@ body {
   }
   .card-sm {
     padding: 0px;
+  }
+  .social-margin-sm {
+    margin: auto
   }
 }
