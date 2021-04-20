@@ -3,6 +3,7 @@ import './../App.css';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import logo from './../logoLight.png';
+import Credits from './Credits';
 import { Facebook, Instagram, GitHub, Linkedin, Twitter, Mail } from 'react-feather';
 
 const Footer = () => {
@@ -73,7 +74,9 @@ const Footer = () => {
                 </Row>
                 <Row className='justify-content-center' style={{ fontSize: '1.3rem', color: '#e3e5e5' }}>
                     We made this website. 
-                    <span><button className='ml-1' style={{ color: '#009dff', backgroundColor: 'transparent', border: 'none' }}>Find us</button></span>.
+                    <span>
+                        <Credits />
+                    </span>.
                 </Row>
             </Col>
         </Row>
