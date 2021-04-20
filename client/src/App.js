@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 import EventsCards from './Components/card';
-
+import Example from './Components/credits';
 import EventsCarousel from './Components/carousel';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
       <br/>
       <br/>
       <EventsCards/>
+      <Example />
     </div>
   );
 }
