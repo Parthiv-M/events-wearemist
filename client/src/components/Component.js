@@ -11,6 +11,7 @@ const Component = () => {
     
     // function to get data from json file
     const getData = async () => {
+      // fetch events data
       const eventsData = await fetch('https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/data/events.json');
       const parsedEvents = await eventsData.json();    
       // function to get upcoming events
@@ -23,10 +24,15 @@ const Component = () => {
         return new Date(event.filterDate.split('-')[0], event.filterDate.split('-')[1]-1, event.filterDate.split('-')[2]) < Date.now()
       });
       setPastData(past);
+      // fetch team data
+      const teamData = await fetch('https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/data/team/team.json')
+      const parsedTeam = await teamData.json();
+      setTeamData(parsedTeam);
     }
   
     const [upcomingData, setUpcomingData] = useState([]);
     const [pastData, setPastData] = useState([]);
+    const [teamData, setTeamData] = useState([]);
   
     useEffect(() => {  
         getData();
@@ -46,7 +52,7 @@ const Component = () => {
                   </Col>
               </Row>
             <PastEvents data={pastData} />
-            <Footer />
+            <Footer data={teamData}/>
         </>
     );
 }

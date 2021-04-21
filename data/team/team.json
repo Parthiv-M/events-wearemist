@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "name": "Parthiv Menon",
+        "work": "Design and development",
+        "photo": "https://live.staticflickr.com/65535/50379563106_446f29cf13.jpg",
+        "oneLiner": "Full Stack Developer, handling mundanity with creativity",
+        "github": "https://github.com/Parthiv-M",
+        "linkedin": "https://www.linkedin.com/in/parthivmenon",
+        "instagram": "https://www.instagram.com/_.parthiv_/"
+    },
+    {
+        "id": "2",
+        "name": "Pal Chheda",
+        "work": "Front-end Development",
+        "photo": "https://live.staticflickr.com/65535/50379743877_df318a7f1d.jpg",
+        "oneLiner": "Just a Front End Developer",
+        "github": "https://github.com/PalChheda",
+        "linkedin": "",
+        "instagram": "https://www.instagram.com/pal_chheda"
+    },
+    {
+        "id": "3",
+        "name": "Nithin Chowdary",
+        "work": "Design",
+        "photo": "https://live.staticflickr.com/65535/50378865658_e41873ef0a.jpg",
+        "oneLiner": "Cyber security enthusiast, with a bit of creativity",
+        "github": "https://github.com/nithinchowdary007",
+        "linkedin": "https://www.linkedin.com/in/nithin-chowdary-garapati-795432192/",
+        "instagram": "https://www.instagram.com/nitin_chowdary7/"
+    },
+    {
+        "id": "4",
+        "name": "Aviral Gupta",
+        "work": "Front-end Development",
+        "photo": "https://live.staticflickr.com/65535/50379743187_e67e74972e.jpg",
+        "oneLiner": "Front End Developer, with a sense of humour",
+        "github": "https://github.com/Aviral044",
+        "linkedin": "https://www.linkedin.com/in/aviral-gupta-5984b31a0/",
+        "instagram": "https://www.instagram.com/aviralgupta044/"
+    }
+]
