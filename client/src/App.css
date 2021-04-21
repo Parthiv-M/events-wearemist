@@ -110,6 +110,7 @@ body {
 .btn:active {
   outline: none !important;
   box-shadow: none;
+  border: none;
 }
 
 /* social media handles */
