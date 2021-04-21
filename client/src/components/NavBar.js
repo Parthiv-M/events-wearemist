@@ -3,6 +3,7 @@ import './../App.css';
 import logo from './../logoLight.png';
 import Navbar from 'react-bootstrap/Navbar';
 
+// navbar component for the page
 const EventsNavBar = () => {
     return (
         <Navbar fixed='top' className='navbar-md navbar-sm'>

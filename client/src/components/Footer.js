@@ -3,11 +3,13 @@ import './../App.css';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 import logo from './../logoLight.png';
-import FindUs from './Credits';
+import FindUs from './FindUs';
 import { Facebook, Instagram, GitHub, Linkedin, Twitter, Mail } from 'react-feather';
 
-const Footer = () => {
+// footer component
+const Footer = ({data}) => {
 
+    // handles icons hover state
     const [hover, setHover] = useState(false);
     const [index, setIndex] = useState(0);
 
@@ -75,7 +77,7 @@ const Footer = () => {
                 <Row className='justify-content-center' style={{ fontSize: '1.3rem', color: '#e3e5e5' }}>
                     We made this website. 
                     <span>
-                        <FindUs />
+                        <FindUs data={data}/>
                     </span>.
                 </Row>
             </Col>

@@ -3,6 +3,7 @@ import './../App.css';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
 
+// component for genereal info text for page
 const InfoText = () => {
     return (
         <Row className='padding-md padding-sm'>
