@@ -26,7 +26,7 @@ const TeamCards = ({data}) => {
     return(
         data.map((person) => {
             return (
-                <Card cariant="top" style={{ width: '20rem', height:'60vh', margin: 50, color:'white', background:'transparent', border:'none' }}>
+                <Card className="py-5" variant="top" style={{ width: '20rem', height:'70vh', margin: 'auto', color:'white', background:'transparent', border:'none' }}>
                     <Card.Img style={{ borderRadius:'50%', width:'70%', display:'block', margin:'auto'}} src={person.photo} />
                     <Card.Body>
                         <Card.Title>
@@ -38,7 +38,7 @@ const TeamCards = ({data}) => {
                             <div style={{ textAlign:'center', fontSize:'16px', paddingBottom:'10px' }}>
                                 {person.oneLiner}
                             </div>
-                            <Row className="justify-content-center align-items-center" style={{ marginLeft: 25 }}>
+                            <Row className="justify-content-center align-items-center ml-3">
                                 <Col xs={4} md={4} className='my-3' style={{ }}>
                                     <a target="_blank" rel="noreferrer" href={person.instagram}>
                                         <Instagram onMouseEnter={() => onHover(person.id+1)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+1) ? '#009dff' : '#e3e5e5' }/>
