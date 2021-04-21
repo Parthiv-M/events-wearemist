@@ -26,7 +26,7 @@ const TeamCards = ({data}) => {
     return(
         data.map((person) => {
             return (
-                <Card cariant="top" style={{ width: '20rem', height:'60vh', margin:'auto', color:'white', background:'transparent', border:'none' }}>
+                <Card cariant="top" style={{ width: '20rem', height:'60vh', margin: 50, color:'white', background:'transparent', border:'none' }}>
                     <Card.Img style={{ borderRadius:'50%', width:'70%', display:'block', margin:'auto'}} src={person.photo} />
                     <Card.Body>
                         <Card.Title>
@@ -38,18 +38,18 @@ const TeamCards = ({data}) => {
                             <div style={{ textAlign:'center', fontSize:'16px', paddingBottom:'10px' }}>
                                 {person.oneLiner}
                             </div>
-                            <Row style={{ justifyContent:'center' }}>
-                                <Col xs={4} md={2} className='my-3' style={{ paddingRight:'60px' }}>
+                            <Row className="justify-content-center align-items-center" style={{ marginLeft: 25 }}>
+                                <Col xs={4} md={4} className='my-3' style={{ }}>
                                     <a target="_blank" rel="noreferrer" href={person.instagram}>
                                         <Instagram onMouseEnter={() => onHover(person.id+1)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+1) ? '#009dff' : '#e3e5e5' }/>
                                     </a>
                                 </Col>
-                                <Col xs={4} md={2} className='my-3' style={{ paddingRight:'60px' }}>
+                                <Col xs={4} md={4} className='my-3' style={{ }}>
                                     <a target="_blank" rel="noreferrer" href={person.linkedin}>
                                         <Linkedin onMouseEnter={() => onHover(person.id+2)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+2) ? '#009dff' : '#e3e5e5' }/>
                                     </a>
                                 </Col>
-                                <Col xs={4} md={2} className='my-3'>
+                                <Col xs={4} md={4} className='my-3'>
                                     <a target="_blank" rel="noreferrer" href={person.github}>
                                         <GitHub onMouseEnter={() => onHover(person.id+3)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+3)? '#009dff' : '#e3e5e5' }/>
                                     </a>
