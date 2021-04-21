@@ -75,6 +75,10 @@ body {
   background-color: #111111;
 }
 
+.navbar-expand {
+  justify-content: space-between;
+}
+
 .footer-md {
   background-color: #111111;
   height: 30vh;
@@ -100,6 +104,12 @@ body {
 
 .btn {
   padding: 0 0.75rem;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
 }
 
 /* social media handles */
