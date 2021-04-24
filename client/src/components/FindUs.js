@@ -26,7 +26,7 @@ const TeamCards = ({data}) => {
     return(
         data.map((person) => {
             return (
-                <Card className="py-5" variant="top" style={{ width: '20rem', height:'70vh', margin: 'auto', color:'white', background:'transparent', border:'none' }}>
+                <Card className="py-5" variant="top" style={{ width: '20rem', height:'70vh', margin: 'auto', color:'white', background:'transparent', border:'none'}}>
                     <Card.Img style={{ borderRadius:'50%', width:'70%', display:'block', margin:'auto'}} src={person.photo} />
                     <Card.Body>
                         <Card.Title>
@@ -82,23 +82,27 @@ const FindUs = ({data}) => {
             >
                 Find us
             </Button>
-            <Overlay target={target.current} show={show}>
+            
+            <Overlay target={target.current} show={show} onHide={() => setShow(!show)} rootClose='true' rootCloseEvent='click'>
                 {({ arrowProps, show: _show, popper, ...props }) => (
-                    <Row {...props}
-                        style={{
-                            backgroundColor: 'rgba( 0, 0, 0, 0.87)',
-                            marginLeft: '-5px',
-                            placement: 'left-start',
-                            width:'100%',
-                            position:'fixed',
-                            color: 'white',
-                            zIndex:'1',
-                            ...props.style,
-                        }} 
-                        className='p-md-5 align-items-center justify-content-center'
-                    >
-                        <TeamCards data={data}/>
-                    </Row>
+                        <Row {...props}
+                            style={{
+                                backgroundColor: 'rgba( 0, 0, 0, 0.87)',
+                                marginLeft: '-5px',
+                                paddingTop: '30px',
+                                placement: 'left-start',
+                                width:'100%',
+                                position:'fixed',
+                                color: 'white',
+                                zIndex:'1',
+                                ...props.style,
+                            }} 
+                            className='p-md-5 align-items-center justify-content-center'
+                        >   
+                            <Button variant="light" style={{position:'fixed', top:'1.5rem', right:'1.5rem', borderRadius:'50%', height:'2.5rem', width:'2.5rem', zIndex:'2'}} onClick={() => setShow(!show)}>X</Button>
+                            <TeamCards data={data}/>
+                            
+                        </Row>
                 )}
             </Overlay>
         </>
