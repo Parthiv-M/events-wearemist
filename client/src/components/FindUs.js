@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/esm/Col';
-import { Instagram, GitHub, Linkedin} from 'react-feather';
+import { Instagram, GitHub, Linkedin, XCircle} from 'react-feather';
 
 // returns team cards with data
 const TeamCards = ({data}) => {   
@@ -80,9 +80,8 @@ const FindUs = ({data}) => {
                 fontSize:'20px'
                 }} ref={target} onClick={() => setShow(!show)}
             >
-                Find us
-            </Button>
-            
+                Find us<span style={{ color: 'white' }}>.</span>
+            </Button>            
             <Overlay target={target.current} show={show} onHide={() => setShow(!show)} rootClose='true' rootCloseEvent='click'>
                 {({ arrowProps, show: _show, popper, ...props }) => (
                         <Row {...props}
@@ -99,7 +98,9 @@ const FindUs = ({data}) => {
                             }} 
                             className='p-md-5 align-items-center justify-content-center'
                         >   
-                            <Button variant="light" style={{position:'fixed', top:'1.5rem', right:'1.5rem', borderRadius:'50%', height:'2.5rem', width:'2.5rem', zIndex:'2'}} onClick={() => setShow(!show)}>X</Button>
+                            <div style={{ backgroundColor: 'transparent', border: 'none', position: 'fixed', top:'1.5rem', right: 0, borderRadius:'50%', height:'2.5rem', width:'4.5rem', zIndex:2, cursor:'pointer' }} onClick={() => setShow(!show)}>
+                                <XCircle size={50}/>
+                            </div>
                             <TeamCards data={data}/>
                             
                         </Row>

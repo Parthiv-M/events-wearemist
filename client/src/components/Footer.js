@@ -78,7 +78,7 @@ const Footer = ({data}) => {
                     We made this website. 
                     <span>
                         <FindUs data={data}/>
-                    </span>.
+                    </span>
                 </Row>
             </Col>
         </Row>
