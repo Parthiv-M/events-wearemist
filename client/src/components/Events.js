@@ -19,8 +19,7 @@ const UpcomingEvents = ({data}) => {
                     <img
                     src={event.src}
                     alt={event.name}
-                    className="center"
-                    height={640}
+                    className="center image"
                     />
                 </Row>
                 <Carousel.Caption style={{ height:'fitContent'}}>
@@ -30,7 +29,7 @@ const UpcomingEvents = ({data}) => {
                         </Col>
                         <Col sm={12} md={4} className='text-align-right-md text-align-sm head-size-md head-size-sm' style={{ fontWeight: 'bold', color: '#3c3c3c' }}>
                             <span >
-                                <MapPin style={{ margin: 7 }}/>
+                                <MapPin size={35} style={{ marginTop: -7, marginRight: 5 }}/>
                                 {event.platform}
                             </span>
                         </Col>
@@ -56,11 +55,9 @@ const UpcomingEvents = ({data}) => {
                             </span>
                         </Col>                        
                     </Row>
-                    <h4 style={{ textAlign:'left', color:'#808080' }}>
-                            
-                    </h4>
                     <br/>
-                    <div style={{textAlign:'left'}}>
+                    <Row className='justify-sm-content-center'>
+                    <div>
                         {
                             event.badges.map((badge, index) =>
                             {
@@ -74,6 +71,22 @@ const UpcomingEvents = ({data}) => {
                             })
                         }
                     </div>
+                    <div style={{ marginLeft: 'auto' }}>
+                        {
+                        // check for existence of link    
+                        !event.link 
+                            ? 
+                            <span></span>
+                            : 
+                            <span className="non-head-size-md non-head-size-md">
+                                <Badge pill variant="primary" style={{ backgroundColor:'transparent', color: '#009dff', padding: '15px', marginTop: 5, marginRight: 5, justifyContent:'center' }}>
+                                    <a id="register" style={{ textDecoration: 'none' }} href={event.link} target="_blank" rel="noreferrer">Register here</a>
+                                    <span style={{ width:'20px' }}></span>
+                                </Badge>
+                            </span> 
+                        }
+                    </div>
+                    </Row>
                 </Carousel.Caption>
             </Carousel.Item>
         );
