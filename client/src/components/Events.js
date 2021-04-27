@@ -9,6 +9,8 @@ import './../App.css';
 
 // carousel for upcoming events
 const UpcomingEvents = ({data}) => {
+
+    // individual carousel slides
     const carouselSlide = data.map((event, index) => {
 
         return (
@@ -18,6 +20,7 @@ const UpcomingEvents = ({data}) => {
                     src={event.src}
                     alt={event.name}
                     className="center"
+                    height={640}
                     />
                 </Row>
                 <Carousel.Caption style={{ height:'fitContent'}}>
@@ -47,7 +50,7 @@ const UpcomingEvents = ({data}) => {
                             })}
                         </Col>
                         <Col sm={12} md={4} className='text-align-right-md text-align-sm non-head-size-md non-head-size-sm'>
-                            <span>
+                            <span className='text-dark'>
                                 {event.date}{', '}
                                 {event.time}
                             </span>
@@ -76,12 +79,32 @@ const UpcomingEvents = ({data}) => {
         );
     });
 
-    return (    
+    // component for no upcoming events
+    const NoUpcomingEvents = () => {
+        return (
+            <Row>
+                <img
+                src="https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/noEvents.png"
+                alt='No Upcoming Events'
+                className="center"
+                height={550}
+                />
+            </Row>
+        );
+    }
+
+    return (           
         <div className='container'>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Carousel >
-                    {carouselSlide}
-                </Carousel>
+                {
+                    data.length === 0 
+                    ? 
+                    <NoUpcomingEvents /> 
+                    : 
+                    <Carousel>
+                        {carouselSlide}
+                    </Carousel>
+                }
             </div>
         </div>
     );

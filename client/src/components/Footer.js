@@ -35,7 +35,7 @@ const Footer = ({data}) => {
                 />
             </Col>
             <Col md={4} sm={12} className='footer-text-align-sm footer-text-align-md'>
-                <h2 style={{ color: 'white', fontWeight: 'bold'}}>Manipal Information Security Team</h2>
+                <h3 style={{ color: 'white', fontWeight: 'bold'}}>Manipal Information Security Team</h3>
                 <h4 style={{ color: 'white' }}>Manipal Institute of Technology</h4>
                 <h4 style={{ color: 'white' }}>Udupi, Karnataka</h4>
                 <h4 style={{ color: 'white' }}>576104</h4>
