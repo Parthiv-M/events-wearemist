@@ -99,8 +99,7 @@ const UpcomingEvents = ({data}) => {
                 <img
                 src="https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/noEvents.png"
                 alt='No Upcoming Events'
-                className="center"
-                height={550}
+                className="center image"
                 />
             </Row>
         );
