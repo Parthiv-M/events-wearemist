@@ -6,6 +6,7 @@ import Navbar from './NavBar';
 import Footer from './Footer';
 import { PastEvents, UpcomingEvents } from './Events';
 import './../App.css';
+import Loader from 'react-loader-spinner';
 
 const Component = () => {
     
@@ -28,17 +29,30 @@ const Component = () => {
       const teamData = await fetch('https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/data/team/team.json')
       const parsedTeam = await teamData.json();
       setTeamData(parsedTeam);
+
+      setLoading(false);
     }
   
     const [upcomingData, setUpcomingData] = useState([]);
     const [pastData, setPastData] = useState([]);
     const [teamData, setTeamData] = useState([]);
+    const [loading, setLoading] = useState(true);
   
     useEffect(() => {  
         getData();
     }, []);
 
     return(
+      loading ? 
+        <div className='text-center' style={{ height: '100vh', width: '100vw', overflow: 'hidden', lineHeight: '100vh ' }}>
+         <Loader
+          type='Bars'
+          height={100}
+          width={100}
+          color='#1b1b1b'
+         ></Loader>
+        </div> 
+        :
         <>
             <Navbar />
             <InfoText />
