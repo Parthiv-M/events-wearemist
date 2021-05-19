@@ -2,7 +2,8 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 import { MapPin } from 'react-feather';
 import Card from 'react-bootstrap/Card';
 import './../App.css';
@@ -16,10 +17,11 @@ const UpcomingEvents = ({data}) => {
         return (
             <Carousel.Item key={index} style={{ height:'fitContent', width:'96vw' }}>
                 <Row>
-                    <img
+                    <Image
                     src={event.src}
                     alt={event.name}
-                    className="center image"
+                    className="image center"
+                    fluid
                     />
                 </Row>
                 <Carousel.Caption style={{ height:'fitContent'}}>
@@ -167,7 +169,7 @@ const PastEvents = ({data}) => {
                     data.badges.map((badge, index) =>
                     {
                         return(
-                            <Badge className='ml-2' pill variant="secondary" style={{ padding: 10, fontSize: '1rem' }}>
+                            <Badge className='ml-2 mt-1' pill variant="secondary" style={{ padding: 10, fontSize: '1rem' }}>
                                 {badge}
                             </Badge>
                         )
@@ -181,7 +183,7 @@ const PastEvents = ({data}) => {
     const eventCard = data.map((event, index) => 
       {
           return(
-            <Card key={index} style={{ margin: 10, width: 460, height: 730 }}>
+            <Card key={index} style={{ margin: 10, width: 460, height: 'fitContent' }}>
                 <div style={{ backgroundColor:'#E8E8E8' }}>
                 <div style={{ height: 'fitContent' }}>
                     <Card.Img variant="top" src={event.src} />

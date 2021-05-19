@@ -43,32 +43,32 @@ const Footer = ({data}) => {
             <Col md={4} style={{ textAlign: 'center', alignSelf: 'center' }}>
                 <Row className='justify-content-center' style={{ fontSize: '1.6rem', color: '#e3e5e5' }}>More ways to connect</Row>
                 <Row className='justify-content-center social-margin-md social-margin-sm social'>
-                    <Col xs={4} md={2} className='my-3'>
+                    <Col xs={4} md={2} className='my-3 mx-sm-2'>
                         <a target="_blank" rel="noreferrer" href="https://www.instagram.com/sudo.mist/">
                             <Instagram onMouseEnter={() => onHover(1)} onMouseLeave={noHover} size={30} color={ hover && index===1 ? '#009dff' : '#e3e5e5' }/>
                         </a>
                     </Col>
-                    <Col xs={4} md={2} className='my-3'>
+                    <Col xs={4} md={2} className='my-3 mx-sm-2'>
                         <a target="_blank" rel="noreferrer" href="https://www.facebook.com/wearemist.in/">
                             <Facebook onMouseEnter={() => onHover(2)} onMouseLeave={noHover} size={30} color={ hover && index===2 ? '#009dff' : '#e3e5e5' }/>
                         </a>
                     </Col>
-                    <Col xs={4} md={2} className='my-3'>
+                    <Col xs={4} md={2} className='my-3 mx-sm-2'>
                         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/manipal-information-security-team">
                             <Linkedin onMouseEnter={() => onHover(3)} onMouseLeave={noHover} size={30} color={ hover && index===3 ? '#009dff' : '#e3e5e5' }/>
                         </a>
                     </Col>
-                    <Col xs={4} md={2} className='my-3'>
+                    <Col xs={4} md={2} className='my-3 mx-sm-2'>
                         <a target="_blank" rel="noreferrer" href="https://github.com/MIST1819">
                             <GitHub onMouseEnter={() => onHover(4)} onMouseLeave={noHover} size={30} color={ hover && index===4 ? '#009dff' : '#e3e5e5' }/>
                         </a>
                     </Col>
-                    <Col xs={4} md={2} className='my-3'>
+                    <Col xs={4} md={2} className='my-3 mx-sm-2'>
                         <a target="_blank" rel="noreferrer" href="https://twitter.com/sudo_mist">
                             <Twitter onMouseEnter={() => onHover(5)} onMouseLeave={noHover} size={30} color={ hover && index===5 ? '#009dff' : '#e3e5e5' }/>
                         </a>
                     </Col>
-                    <Col xs={4} md={2} className='my-3'>
+                    <Col xs={4} md={2} className='my-3 mx-sm-2'>
                         <a target="_blank" rel="noreferrer" href="mailto:sudo@wearemist.in">
                             <Mail onMouseEnter={() => onHover(6)} onMouseLeave={noHover} size={30} color={ hover && index===6 ? '#009dff' : '#e3e5e5' }/>
                         </a>

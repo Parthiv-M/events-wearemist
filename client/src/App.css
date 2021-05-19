@@ -12,14 +12,12 @@
 
 .center {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: auto;
-  padding-right: auto;
+  margin: auto;
 }
 
 .image {
-  height: 640px
+  object-fit: contain;
+  height: 640px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -135,7 +133,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   .image {
-    height: 400px
+    height: 20rem;
   }
   .info-sm {
     font-size: 1rem;
@@ -157,7 +155,8 @@ body {
   }
   .footer-sm {
     padding: 50px;
-    height: 100vh;
+    height: fit-content;
+    /* margin-bottom: rem; */
   }
   .footer-text-align-sm {
     text-align: center;
