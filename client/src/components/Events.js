@@ -57,37 +57,36 @@ const UpcomingEvents = ({data}) => {
                             </span>
                         </Col>                        
                     </Row>
-                    <br/>
-                    <Row className='justify-content-md-start justify-content-center'>
-                    <div>
-                        {
-                            event.badges.map((badge, index) =>
+                    <Row style={{marginTop: '1rem'}}>
+                        <Col sm lg={8} className='text-md-left'>
                             {
-                                return(
-                                    <span key={index} className="non-head-size-md non-head-size-md">
-                                        <Badge pill variant="primary" style={{ backgroundColor:'#808080', padding: '15px', marginTop: 5, marginRight: 5, justifyContent:'center' }}>
-                                            {badge}<span style={{ width:'20px' }}></span>
-                                        </Badge>
-                                    </span>
-                                )
-                            })
-                        }
-                    </div>
-                    <div>
-                        {
-                        // check for existence of link    
-                        !event.link 
-                            ? 
-                            <></>
-                            : 
-                            <span className="non-head-size-md non-head-size-md">
-                                <Badge pill variant="primary" style={{ backgroundColor:'transparent', color: '#009dff', padding: '15px', marginTop: 5, marginRight: 5, justifyContent:'center' }}>
-                                    <a id="register" style={{ textDecoration: 'none' }} href={event.link} target="_blank" rel="noreferrer">Register here</a>
-                                    <span style={{ width:'20px' }}></span>
-                                </Badge>
-                            </span> 
-                        }
-                    </div>
+                                event.badges.map((badge, index) =>
+                                {
+                                    return(
+                                        <span key={index} className="non-head-size-md non-head-size-md">
+                                            <Badge pill variant="primary" style={{ backgroundColor:'#808080', padding: '15px', marginRight: 5 }}>
+                                                {badge}
+                                            </Badge>
+                                        </span>
+                                    )
+                                })
+                            }
+                        </Col>
+                        <Col sm lg={4} className='text-md-right'>
+                            {
+                            // check for existence of link    
+                            !event.link 
+                                ? 
+                                <></>
+                                : 
+                                <span className="non-head-size-md non-head-size-md">
+                                    <Badge pill variant="primary" style={{ backgroundColor:'transparent', color: '#009dff', padding: '15px' }}>
+                                        <a id="register" style={{ textDecoration: 'none' }} href={event.link} target="_blank" rel="noreferrer">Register here</a>
+                                        <span style={{ width:'20px' }}></span>
+                                    </Badge>
+                                </span> 
+                            }
+                        </Col>
                     </Row>
                 </Carousel.Caption>
             </Carousel.Item>
