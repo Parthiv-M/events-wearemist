@@ -11,14 +11,14 @@
         "filterDate": "2021-06-02"
     },
     {
-        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/smoked.png",
-        "name": "Smoked",
+        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/faceless.png",
+        "name": "Faceless",
         "platform": "Online",
         "speakers": [ ],
-        "date": "4 June 2021",
+        "date": "2 June 2021",
         "time": "12:00",
-        "badges": [ "Smoked", "Incognito", "Webhunt" ],
-        "filterDate": "2021-06-04"
+        "badges": [ "Faceless", "Incognito", "OSINT" ],
+        "filterDate": "2021-06-02"
     },
     {
         "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/wtfCTF.png",
@@ -31,14 +31,14 @@
         "filterDate": "2021-06-03"
     },
     {
-        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/faceless.png",
-        "name": "Faceless",
+        "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/smoked.png",
+        "name": "Smoked",
         "platform": "Online",
         "speakers": [ ],
-        "date": "2 June 2021",
+        "date": "4 June 2021",
         "time": "12:00",
-        "badges": [ "Faceless", "Incognito", "OSINT" ],
-        "filterDate": "2021-06-02"
+        "badges": [ "Smoked", "Incognito", "Webhunt" ],
+        "filterDate": "2021-06-04"
     },
     {
         "src": "https://raw.githubusercontent.com/Parthiv-M/events-wearemist/main/images/blockChain.jpeg",
