@@ -58,7 +58,7 @@ const UpcomingEvents = ({data}) => {
                         </Col>                        
                     </Row>
                     <br/>
-                    <Row className='justify-sm-content-center'>
+                    <Row className='justify-content-md-start justify-content-center'>
                     <div>
                         {
                             event.badges.map((badge, index) =>
@@ -73,12 +73,12 @@ const UpcomingEvents = ({data}) => {
                             })
                         }
                     </div>
-                    <div style={{ marginLeft: 'auto' }}>
+                    <div>
                         {
                         // check for existence of link    
                         !event.link 
                             ? 
-                            <span></span>
+                            <></>
                             : 
                             <span className="non-head-size-md non-head-size-md">
                                 <Badge pill variant="primary" style={{ backgroundColor:'transparent', color: '#009dff', padding: '15px', marginTop: 5, marginRight: 5, justifyContent:'center' }}>
