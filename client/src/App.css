@@ -83,3 +83,34 @@ a:hover {
     -webkit-transform: scaleY(1.0);
   }
 }
+/*EventCard Css*/
+.subtitle{
+  background: 
+  linear-gradient(to right, white, white) var(--d, 0) 100%/var(--f, 0) 2px no-repeat,
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 0% 100% /var(--p, 0) 2px no-repeat;
+  --d:0%;
+  --p:0;
+  --f: 70%;
+  transition: 0.7s;
+}
+.subtitle:hover {
+  --d: 100%;
+  --p:79%;
+  --f:20%;
+  transition:0.7s;
+}
+.subtitlea{
+  background: 
+  linear-gradient(to right, #6EE6B6, #6EE6B6) var(--d, 0) 100%/var(--f, 0) 2px no-repeat,
+  linear-gradient(to right, white, white) 0% 100% /var(--p, 0) 2px no-repeat;
+  --d:0%;
+  --p:0;
+  --f: 70%;
+  transition: 0.7s;
+}
+.subtitlea:hover {
+  --d: 100%;
+  --p:79%;
+  --f:20%;
+  transition:0.7s;
+}
