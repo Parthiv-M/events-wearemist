@@ -60,7 +60,7 @@ const EventsPage = () => {
                 <div className="" style={{ minHeight: "100vh" }}>
                     <div className="my-5 container w-100 p-4">
                         <div className="row m-0 p-0">
-                            <p className="display-4 text-white w-100 emphasis-heading">{data[0].name}</p>
+                            <p className="text-white w-100 emphasis-heading" style={{ fontSize: "2.3rem" }}>{data[0].name}</p>
                             <div className="col-md-6 col-12 m-0 p-0">
                                 <img className="img-fluid w-full rounded" src={data[0].image} alt='abc'/>
                             </div>
@@ -133,7 +133,7 @@ const EventsPage = () => {
                         &&
                         <>
                             <div className="container mx-auto w-100 text-white my-5">
-                                <h2 className="text-white text-center emphasis-heading blue-gradient-text my-5">Other Past Events</h2>
+                                <h2 className="text-white text-center emphasis-heading blue-gradient-text my-5">Other {type.split("")[0].toUpperCase() + type.split("").slice(1).join("")} Events</h2>
                                 {
                                     data.slice(1, data.length).map((details) => {
                                         return <EventCard data={details} key={details._id}/>       

@@ -91,18 +91,18 @@ const EventCard = (props) => {
                             : ""
                         }
                         <div className="text-left">
-                            <p className="emphasis-heading m-0" style={{ width: "60%", fontSize: "1.8rem", borderBottom: "1px solid white" }}>
+                            <p className="emphasis-heading m-0" style={{ width: "75%", fontSize: "1.8rem", borderBottom: "1px solid white" }}>
                                 Date and Time
                             </p>
                             <div className="d-flex my-2">
-                                <p className="my-1 text-md-left text-center" style={{ fontSize: "1.2rem" }}>
-                                    {new Date(data.startDate).toDateString()}
+                                <p className="my-1 text-left" style={{ fontSize: "1.2rem" }}>
+                                    {new Date(data.startDate).toDateString().split("").slice(4).join("")}
                                 </p>
                                 <div className="d-flex my-auto mx-2 align-items-center justify-content-center p-2" style={{ borderRadius: "50%", backgroundColor: "#6EE6B6" }}>
                                     <p className="text-center m-auto text-dark">TO</p>
                                 </div>
-                                <p className="my-1 text-md-left text-center" style={{ fontSize: "1.2rem" }}>
-                                    {new Date(data.endDate).toDateString()}
+                                <p className="my-1 text-left" style={{ fontSize: "1.2rem" }}>
+                                    {new Date(data.endDate).toDateString().split("").slice(4).join("")}
                                 </p>
                             </div>
                         </div>

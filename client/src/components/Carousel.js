@@ -65,20 +65,18 @@ const Carousel = (props) => {
                                         <div className="d-flex flex-wrap p-0 align-items-center justify-content-md-center justify-content-start">
                                             {
                                                 event.venue 
-                                                ?
+                                                &&
                                                 <p className="p-2 rounded bg-dark mx-1" style={{ color: "#6EE6B6", width: "fit-content" }}>
                                                     <span className="mx-1 my-auto"><MapPin size={18} color='#6EE6B6'/></span>
                                                     {event.venue}
                                                 </p> 
-                                                :  ""
                                             }
                                             {
                                                 event.platform 
-                                                ?
+                                                &&
                                                 <p className="p-2 rounded border border-dark mx-1" style={{ color: "#6EE6B6", width: "fit-content" }}>
                                                     {event.platform}
                                                 </p>
-                                                : ""
                                             }
                                             {
                                                 event.registerLink
