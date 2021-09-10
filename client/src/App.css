@@ -176,3 +176,29 @@ a:hover {
   --f:20%;
   transition:0.7s;
 }
+
+.newTitle1 {
+  background:
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 0% 100% /var(--d, 0) 2px no-repeat,
+  linear-gradient(to right, white, white) 100% 100% /var(--p, 0) 2px no-repeat;
+  transition: 0.8s;
+  --d:75%;
+  --p:24%;
+}
+.newTitle1:hover {
+  --d: 100%;
+  --p:0%;
+}
+
+.newTitle2 {
+  background:
+  linear-gradient(to right, white, white) 0% 100% /var(--d, 0) 2px no-repeat,
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 100% 100% /var(--p, 0) 2px no-repeat;
+  transition: 0.8s;
+  --d:75%;
+  --p:24%;
+}
+.newTitle2:hover {
+  --d: 100%;
+  --p:0%;
+}
