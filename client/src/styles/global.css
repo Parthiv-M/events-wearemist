@@ -1,0 +1,202 @@
+.App {
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
+/* custom text css */
+
+.emphasis-heading {
+  font-family: 'Inter', sans-serif;
+}
+
+.blue-gradient-text {
+  background: linear-gradient(
+    to right,
+    #2196f3,
+    #26c6da,
+    #43a047
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* loader css */
+
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background: linear-gradient(
+    to right,
+    #2196f3,
+    #26c6da,
+    #43a047
+  );
+  -webkit-text-fill-color: transparent;
+  height: 100%;
+  width: 10px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+/* owl carousel customisation */
+
+.owl-prev, .owl-next {
+  position: absolute;
+  top: 40vmin;
+  transform: translateY(-50%);
+}
+.owl-prev { left: -30px; }
+.owl-next { right: -30px; }
+
+.owl-image {
+  height: 70%;
+  width: 70%;
+}
+
+.name {
+  background:
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 50% 100% /var(--d, 0) 2px no-repeat,
+  linear-gradient(to right, white, white) 0% 100% /var(--p, 0) 2px no-repeat,
+  linear-gradient(to right, white, white) 100% 100% /var(--p, 0) 2px no-repeat;
+  transition: 0.8s;
+  --d:50%;
+  --p:24%;
+}
+
+.name:hover {
+  --d: 100%;
+  --p:0%;
+}
+
+.byline{
+  background: 
+  linear-gradient(to right, white, white) var(--d, 0) 100%/var(--f, 0) 2px no-repeat,
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 0% 100% /var(--p, 0) 2px no-repeat;
+  --d:0%;
+  --p:0;
+  --f: 70%;
+  transition: 0.7s;
+}
+
+.byline:hover {
+  --d: 100%;
+  --p:79%;
+  --f:20%;
+  transition:0.7s;
+}
+
+/* scrollbar styles */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6ee7b7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fefefe;
+}
+
+/* footer styles */
+
+footer a {
+  color: #6ee7b7;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a {
+  color: white;
+}
+
+.social-links a:hover {
+  color: #26c6da;
+}
+
+/* mobile designs */
+
+@media only screen and (max-width: 800px) {
+  .owl-image {
+    width: 100%;
+    height: 100%;
+  }
+  .owl-nav {
+    display: none;
+  }
+}
