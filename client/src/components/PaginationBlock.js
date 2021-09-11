@@ -9,6 +9,14 @@ const PaginationBlock = (props) => {
         <div className="container mx-auto my-5 text-white">
             <div className="d-flex justify-content-center mx-auto">
                 {
+                    parseInt(props.current) > 0
+                    && 
+                    <Link to={`/events/past/${props.current - 1}`} className="mx-2">
+                        <p style={{ color: "#6EE6B6" }}>
+                            { "<<" } Prev</p>
+                    </Link>
+                }
+                {
                     props.pages.map((page, index) => {
                         return (
                             <Link key={page} to={`/events/past/${page}`}>
@@ -18,6 +26,15 @@ const PaginationBlock = (props) => {
                             </Link>
                         )
                     })
+                }
+                {
+                    parseInt(props.current) < props.pages.length - 1
+                    && 
+                    <Link to={`/events/past/${props.current + 1}`} className="mx-2">
+                        <p style={{ color: "#6EE6B6" }}>
+                            Next { ">>" }
+                        </p>
+                    </Link>
                 }
             </div>
         </div>

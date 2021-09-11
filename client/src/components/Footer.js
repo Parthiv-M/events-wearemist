@@ -1,6 +1,7 @@
 import { React } from 'react';
 import mistLogo from './../assets/logoLight.png';
 import { Instagram, Facebook, Linkedin, GitHub, Twitter, Mail } from "react-feather";
+import { Link } from 'react-router-dom';
 
 // footer component
 const Footer = () => {
@@ -20,9 +21,9 @@ const Footer = () => {
                         <a href="https://blogs.wearemist.in" target="_blank" rel="noreferrer">
                             <p className="m-0">Blog</p>
                         </a>
-                        <a href="https://events.wearemist.in/creators" target="_blank" rel="noreferrer">
+                        <Link to="/creators">
                             <p className="m-0">Meet the creators</p>
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="col-md-4 col-6 d-flex m-auto flex-column align-items-center">

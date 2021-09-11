@@ -18,33 +18,33 @@ const Carousel = (props) => {
                             <div className="owl-image mx-auto">
                                 <img className='mx-auto z-1 border-0 rounded h-md-75 w-md-75 h-100 w-100' src={event.image} alt={event.name}/>
                             </div>
-                            <div className="mx-auto z-2 py-3" style={{ width: "80vmin" }}>
+                            <div className="mx-auto z-2 py-3" style={{ top: 0, width: "80vmin" }}>
                                 <div className='d-flex flex-column justify-content-center'>
-                                    <p className="name pb-2 emphasis-heading text-md-center text-left" style={{ fontSize: "1.7rem" }}>
+                                    <p className="name pb-2 emphasis-heading text-center" style={{ fontSize: "1.7rem" }}>
                                         {event.name}
                                     </p>
-                                    <div className="text-md-center d-flex justify-content-md-center justify-content-left" style={{ fontSize: "1.3rem" }}>
+                                    <div className="text-md-center d-flex justify-content-center" style={{ fontSize: "1.3rem" }}>
                                         {
                                             event.speakers.map((speaker, index) => {
                                                 return (
                                                     <p key={index}>
                                                         {speaker}
                                                         {
-                                                            (event.speakers.length > 1 && index !== event.speakers.length - 1)  ? "," : ""
+                                                            (event.speakers.length > 1 && index !== event.speakers.length - 1)  ? <span className="mx-1" style={{ color: "#6EE6B6" }}>|</span> : ""
                                                         }
                                                     </p>
                                                 )
                                             })
                                         }
                                     </div>
-                                    <div className="d-flex align-items-center justify-content-start justify-content-md-center" style={{ fontSize:'0.8rem' }}>
+                                    <div className="d-flex align-items-center justify-content-center" style={{ fontSize:'0.8rem' }}>
                                         <p className="my-auto" style={{ fontSize: "1.2rem" }}>{new Date(event.startDate).toDateString().split("").slice(4).join("")}</p>
                                         <div className="d-flex my-auto mx-2 align-items-center justify-content-center p-2" style={{ borderRadius: "50%", backgroundColor: "#6EE6B6" }}>
                                             <p className="text-center m-auto text-dark">TO</p>
                                         </div>
                                         <p className="my-auto" style={{ fontSize: "1.2rem" }}>{new Date(event.endDate).toDateString().split("").slice(4).join("")}</p>
                                     </div>
-                                    <div className="d-flex flex-wrap justify-content-md-center mt-3">
+                                    <div className="d-flex flex-wrap justify-content-center mt-3">
                                         {
                                             event.tags.map((tag, index) => {
                                                 return <div key={index} className='mr-2 my-auto py-1 px-2' style={{ borderRadius:'50px', color: "#6EE6B6", border: "1px solid #6EE6B6" }}>
@@ -54,15 +54,14 @@ const Carousel = (props) => {
                                         }
                                         {
                                             event.isInternal 
-                                            ?
+                                            &&
                                             <div className='m-1 py-1 px-2' style={{ borderRadius:'50px', color: "#6EE6B6", border: "1px solid #6EE6B6" }}>
                                                 Internal
                                             </div>
-                                            : ""
                                         }
                                     </div>
                                     <div className="mt-3">
-                                        <div className="d-flex flex-wrap p-0 align-items-center justify-content-md-center justify-content-start">
+                                        <div className="d-flex flex-wrap p-0 align-items-center justify-content-center">
                                             {
                                                 event.venue 
                                                 &&
@@ -80,14 +79,13 @@ const Carousel = (props) => {
                                             }
                                             {
                                                 event.registerLink
-                                                ?
+                                                &&
                                                 <a href={event.registerLink} className="text-dark mx-1" style={{ cursor: "pointer" }}>
                                                     <p className="p-2 rounded" style={{ backgroundColor: "#6EE6B6", width: "fit-content" }}>
                                                         Register yourself 
                                                         <span><ChevronRight size={19}/></span>
                                                     </p>
                                                 </a>
-                                                : ""
                                             }
                                         </div>
                                     </div>

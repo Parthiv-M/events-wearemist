@@ -18,6 +18,10 @@ p {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 button:active, button:focus {
   outline: none;
 }
@@ -51,13 +55,7 @@ button:active, button:focus {
 }
 
 .spinner > div {
-  background: linear-gradient(
-    to right,
-    #2196f3,
-    #26c6da,
-    #43a047
-  );
-  -webkit-text-fill-color: transparent;
+  background: #2196f3;
   height: 100%;
   width: 10px;
   display: inline-block;
@@ -116,36 +114,45 @@ button:active, button:focus {
   width: 70%;
 }
 
-.name {
+.green-underline {
   background:
-  linear-gradient(to right, #6EE6B6, #6EE6B6) 50% 100% /var(--d, 0) 2px no-repeat,
-  linear-gradient(to right, white, white) 0% 100% /var(--p, 0) 2px no-repeat,
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 0% 100% /var(--d, 0) 2px no-repeat,
   linear-gradient(to right, white, white) 100% 100% /var(--p, 0) 2px no-repeat;
   transition: 0.8s;
-  --d:50%;
+  --d:75%;
   --p:24%;
 }
 
-.name:hover {
+.green-underline:hover {
   --d: 100%;
   --p:0%;
 }
 
-.byline{
-  background: 
-  linear-gradient(to right, white, white) var(--d, 0) 100%/var(--f, 0) 2px no-repeat,
-  linear-gradient(to right, #6EE6B6, #6EE6B6) 0% 100% /var(--p, 0) 2px no-repeat;
-  --d:0%;
-  --p:0;
-  --f: 70%;
-  transition: 0.7s;
+.white-underline {
+  background:
+  linear-gradient(to right, white, white) 0% 100% /var(--d, 0) 2px no-repeat,
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 100% 100% /var(--p, 0) 2px no-repeat;
+  transition: 0.8s;
+  --d:75%;
+  --p:24%;
 }
 
-.byline:hover {
+.white-underline:hover {
   --d: 100%;
-  --p:79%;
-  --f:20%;
-  transition:0.7s;
+  --p:0%;
+}
+
+/* view more button styles */
+
+.view-more { 
+  background-color: transparent;
+  color: white;
+}
+
+.view-more:hover {
+  background-color: rgb(233, 233, 233);
+  color: black;
+  border: none;
 }
 
 /* scrollbar styles */

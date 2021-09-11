@@ -18,26 +18,26 @@ const EventsPage = () => {
     useEffect(() => {
         async function fetchData() {
             let pagesArray = [];
-            if(type === "past") {
-                const resPast = await fetch(`${SERVER_URL}/api/events?path=past&page=${page}`);
-                const pastEvents = await resPast.json();
-                setData(pastEvents.data);
+            const resPast = await fetch(`${SERVER_URL}/api/events?path=past&page=${page}`);
+            const pastEvents = await resPast.json();
+            const resCurrent = await fetch(`${SERVER_URL}/api/events?path=current&page=${page}`);
+            const currentEvents = await resCurrent.json();
+            const resUpcoming = await fetch(`${SERVER_URL}/api/events?path=upcoming&page=${page}`);
+            const upcomingEvents = await resUpcoming.json();
+            if(type === "past") {                
+                setData(pastEvents.data.filter(val => !currentEvents.data.map(curr => curr._id).includes(val._id)));
                 for(let i = 0; i < Math.ceil(pastEvents.length / 6); i++){
                     pagesArray.push(i);
                 }
                 setPages(pagesArray);
             } else if (type === "current") {
-                const resCurrent = await fetch(`${SERVER_URL}/api/events?path=current&page=${page}`);
-                const currentEvents = await resCurrent.json();
                 setData(currentEvents.data);
                 for(let i = 0; i < Math.ceil(currentEvents.length / 6); i++){
                     pagesArray.push(i);
                 }
                 setPages(pagesArray);
             } else if (type === "upcoming") {
-                const resUpcoming = await fetch(`${SERVER_URL}/api/events?path=upcoming&page=${page}`);
-                const upcomingEvents = await resUpcoming.json();
-                setData(upcomingEvents.data);
+                setData(upcomingEvents.data.filter(val => !currentEvents.data.map(up => up._id).includes(val._id)));
                 for(let i = 0; i < Math.ceil(upcomingEvents.length / 6); i++){
                     pagesArray.push(i);
                 }
@@ -65,7 +65,9 @@ const EventsPage = () => {
                                 <img className="img-fluid w-full rounded" src={data[0].image} alt='abc'/>
                             </div>
                             <div className="col-md-6 col-12 d-flex flex-column m-md-0 my-2 px-md-3 px-0">
-                                <p className="byline pb-1 font-weight-bold" style={{ width: "fit-content", fontSize: "1.5rem", color: "#6EE6B6" }}>What is it?</p>
+                                <p className="green-underline pb-1 font-weight-bold" style={{ width: "fit-content", fontSize: "1.5rem", color: "#6EE6B6" }}>
+                                    What is it?
+                                </p>
                                 <p className="text-white" style={{ fontSize: "1.2rem" }}>
                                     {data[0].description}
                                 </p>
@@ -97,16 +99,18 @@ const EventsPage = () => {
                         </div>
                         <div className="row my-3">
                             <div className="col-md-4">
-                                <p className="byline pb-1 font-weight-bold" style={{ width: "fit-content", fontSize: "1.5rem", color: "#6EE6B6" }}>Date and Time</p>
+                                <p className="green-underline pb-1 font-weight-bold" style={{ width: "fit-content", fontSize: "1.5rem", color: "#6EE6B6" }}>Date and Time</p>
                                 <p className="text-white" style={{ fontSize: "1.2rem" }}>
-                                    {new Date(data[0].startDate).toDateString()} - {new Date(data[0].endDate).toDateString()}
+                                    {new Date(data[0].startDate).getHours()}:{new Date(data[0].startDate).getMinutes()}, {new Date(data[0].startDate).toDateString().split("").slice(4).join("")} 
+                                    {" "}-{" "} 
+                                    {new Date(data[0].endDate).getHours()}:{new Date(data[0].endDate).getMinutes()}, {new Date(data[0].endDate).toDateString().split("").slice(4).join("")}
                                 </p>
                             </div>
                             {
                                 data[0].speakers.length !== 0 
                                 &&
                                 <div className="col-md-4">
-                                    <p className="byline pb-1 font-weight-bold w-50" style={{ fontSize: "1.5rem", color: "#6EE6B6" }}>Speakers</p>
+                                    <p className="green-underline pb-1 font-weight-bold w-50" style={{ fontSize: "1.5rem", color: "#6EE6B6" }}>Speakers</p>
                                     <p className="text-white" style={{ fontSize: "1.2rem" }}>
                                         {
                                             data[0].speakers.map((speaker, index) => {
@@ -120,7 +124,7 @@ const EventsPage = () => {
                                 data[0].venue 
                                 &&
                                 <div className="col-md-4">
-                                    <p className="byline pb-1 font-weight-bold w-25" style={{  fontSize: "1.5rem", color: "#6EE6B6" }}>Venue</p>
+                                    <p className="green-underline pb-1 font-weight-bold w-25" style={{  fontSize: "1.5rem", color: "#6EE6B6" }}>Venue</p>
                                     <p className="text-white" style={{ fontSize: "1.2rem" }}>
                                         {data[0].venue}
                                     </p>
