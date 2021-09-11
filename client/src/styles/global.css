@@ -26,6 +26,16 @@ button:active, button:focus {
   outline: none;
 }
 
+::-moz-selection {
+  color: #2196f3;
+  background-color: black;
+}
+
+::selection {
+  color: #2196f3;
+  background-color: black;
+}
+
 /* custom text css */
 
 .emphasis-heading {
@@ -33,6 +43,12 @@ button:active, button:focus {
 }
 
 .blue-gradient-text {
+  background: -webkit-linear-gradient(
+    left,
+    #2196f3,
+    #26c6da,
+    #43a047
+  );
   background: linear-gradient(
     to right,
     #2196f3,
@@ -42,7 +58,6 @@ button:active, button:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* loader css */
 
@@ -101,23 +116,64 @@ button:active, button:focus {
 
 /* owl carousel customisation */
 
+.navitem {
+  position: absolute;
+  background-color: rgba(0,0,0,0.925);
+  width: 75%;
+}
+
 .owl-prev, .owl-next {
   position: absolute;
+  top: 40vm;
   top: 40vmin;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 100%;
+  width: 100px;
+  border-radius: 2rem;
+  /* background-color: rgba(0, 0, 0, 0.24)!important; */
 }
-.owl-prev { left: -30px; }
-.owl-next { right: -30px; }
+.owl-prev { left: -10vw; }
+.owl-next { right: -10vw; }
+
+.owl-prev:hover, .owl-next:hover {
+  background-color: transparent!important;
+  color: #6EE6B6!important;
+}
 
 .owl-image {
-  height: 70%;
-  width: 70%;
+  height: 75%;
+  width: 75%;
+}
+
+.name {
+  background:
+  -webkit-linear-gradient(left, #6EE6B6, #6EE6B6) 50% 100% /var(--d, 0) 2px no-repeat,
+  -webkit-linear-gradient(left, white, white) 0% 100% /var(--p, 0) 2px no-repeat,
+  -webkit-linear-gradient(left, white, white) 100% 100% /var(--p, 0) 2px no-repeat;
+  background:
+  linear-gradient(to right, #6EE6B6, #6EE6B6) 50% 100% /var(--d, 0) 2px no-repeat,
+  linear-gradient(to right, white, white) 0% 100% /var(--p, 0) 2px no-repeat,
+  linear-gradient(to right, white, white) 100% 100% /var(--p, 0) 2px no-repeat;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  --d:50%;
+  --p:24%;
+}
+
+.name:hover {
+  --d: 100%;
+  --p:0%;
 }
 
 .green-underline {
   background:
+  -webkit-linear-gradient(left, #6EE6B6, #6EE6B6) 0% 100% /var(--d, 0) 2px no-repeat,
+  -webkit-linear-gradient(left, white, white) 100% 100% /var(--p, 0) 2px no-repeat;
+  background:
   linear-gradient(to right, #6EE6B6, #6EE6B6) 0% 100% /var(--d, 0) 2px no-repeat,
   linear-gradient(to right, white, white) 100% 100% /var(--p, 0) 2px no-repeat;
+  -webkit-transition: 0.8s;
   transition: 0.8s;
   --d:75%;
   --p:24%;
@@ -130,8 +186,12 @@ button:active, button:focus {
 
 .white-underline {
   background:
+  -webkit-linear-gradient(left, white, white) 0% 100% /var(--d, 0) 2px no-repeat,
+  -webkit-linear-gradient(left, #6EE6B6, #6EE6B6) 100% 100% /var(--p, 0) 2px no-repeat;
+  background:
   linear-gradient(to right, white, white) 0% 100% /var(--d, 0) 2px no-repeat,
   linear-gradient(to right, #6EE6B6, #6EE6B6) 100% 100% /var(--p, 0) 2px no-repeat;
+  -webkit-transition: 0.8s;
   transition: 0.8s;
   --d:75%;
   --p:24%;
@@ -199,6 +259,11 @@ footer a:hover {
 /* mobile designs */
 
 @media only screen and (max-width: 800px) {
+  .navitem {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+  }
   .owl-image {
     width: 100%;
     height: 100%;

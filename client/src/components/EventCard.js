@@ -74,13 +74,13 @@ const EventCard = (props) => {
                             </div>
                             <div className="d-flex my-2">
                                 <p className="my-1 text-left font-weight-bold" style={{ fontSize: "1.2rem" }}>
-                                    {new Date(data.startDate).getHours()}:{new Date(data.startDate).getMinutes()}, {new Date(data.startDate).toDateString().split("").slice(4).join("")}
+                                    {new Date(data.startDate).getHours()}:{parseInt(new Date(data.startDate).getMinutes()) === 0 ? "00" : new Date(data.startDate).getMinutes()}, {new Date(data.startDate).toDateString().split("").slice(4).join("")}
                                 </p>
                                 <div className="d-flex my-auto mx-2 align-items-center justify-content-center p-2" style={{ borderRadius: "50%", backgroundColor: "#6EE6B6" }}>
                                     <p className="text-center m-auto text-dark">TO</p>
                                 </div>
                                 <p className="my-1 text-left font-weight-bold" style={{ fontSize: "1.2rem" }}>
-                                    {new Date(data.endDate).getHours()}:{new Date(data.endDate).getMinutes()}, {new Date(data.endDate).toDateString().split("").slice(4).join("")}
+                                    {new Date(data.endDate).getHours()}:{parseInt(new Date(data.endDate).getMinutes()) === 0 ? "00" : new Date(data.endDate).getMinutes()}, {new Date(data.endDate).toDateString().split("").slice(4).join("")}
                                 </p>
                             </div>
                         </div>

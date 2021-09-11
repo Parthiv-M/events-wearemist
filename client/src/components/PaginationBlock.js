@@ -11,13 +11,13 @@ const PaginationBlock = (props) => {
                 {
                     parseInt(props.current) > 0
                     && 
-                    <Link to={`/events/past/${props.current - 1}`} className="mx-2">
+                    <Link to={`/events/${props.type}/${parseInt(props.current) - 1}`} className="mx-2">
                         <p style={{ color: "#6EE6B6" }}>
                             { "<<" } Prev</p>
                     </Link>
                 }
                 {
-                    props.pages.map((page, index) => {
+                    props.pages.map((page) => {
                         return (
                             <Link key={page} to={`/events/past/${page}`}>
                                 <button style={parseInt(props.current) === parseInt(page) ? currentPage : otherPage} className="px-2 mx-2 border-0">
@@ -30,7 +30,7 @@ const PaginationBlock = (props) => {
                 {
                     parseInt(props.current) < props.pages.length - 1
                     && 
-                    <Link to={`/events/past/${props.current + 1}`} className="mx-2">
+                    <Link to={`/events/${props.type}/${parseInt(props.current) + 1}`} className="mx-2">
                         <p style={{ color: "#6EE6B6" }}>
                             Next { ">>" }
                         </p>

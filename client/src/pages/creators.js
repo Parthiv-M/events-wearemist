@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Instagram, Linkedin, GitHub } from 'react-feather';
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
@@ -16,6 +16,10 @@ const Creators = () => {
         setHover(false);
         setIndex(0);
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const team =  
     [
@@ -75,15 +79,27 @@ const Creators = () => {
                     <p>{person.oneLiner}</p>
                   </div>
                   <div className='my-4'>
-                      <a target="_blank" rel="noreferrer" href={person.instagram}>
-                          <Instagram className='mx-2' onMouseEnter={() => onHover(person.id+1)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+1) ? '#6EE6B6' : '#e3e5e5' }/>
-                      </a>
-                      <a target="_blank" rel="noreferrer" href={person.linkedin}>
+                      {
+                        person.instagram 
+                        &&
+                        <a target="_blank" rel="noreferrer" href={person.instagram}>
+                            <Instagram className='mx-2' onMouseEnter={() => onHover(person.id+1)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+1) ? '#6EE6B6' : '#e3e5e5' }/>
+                        </a>
+                      }
+                      {
+                        person.linkedin
+                        &&
+                        <a target="_blank" rel="noreferrer" href={person.linkedin}>
                           <Linkedin className='mx-2' onMouseEnter={() => onHover(person.id+2)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+2) ? '#6EE6B6' : '#e3e5e5' }/>
-                      </a>
-                      <a target="_blank" rel="noreferrer" href={person.github}>
+                        </a>
+                      }
+                      {
+                        person.github
+                        &&
+                        <a target="_blank" rel="noreferrer" href={person.github}>
                           <GitHub className='mx-2' onMouseEnter={() => onHover(person.id+3)} onMouseLeave={noHover} size={30} color={ hover && index===(person.id+3) ? '#6EE6B6' : '#e3e5e5' }/>
-                      </a>
+                        </a>
+                      }
                   </div>
               </div>
           </div>

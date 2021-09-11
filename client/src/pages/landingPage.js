@@ -32,10 +32,10 @@ const LandingPage = () => {
 
     return (
         <div>
-            <div className="mx-auto py-md-5 p-4" style={{ width: "65%" }}>
+            <div className="mx-auto py-5" style={{ width: "65%" }}>
                 <h1 className='text-white pb-0 mb-0 emphasis-heading display-4'>Events</h1>
                 <h6 className='text-muted emphasis-heading' style={{ fontSize: "1.3rem" }}>Events by MIST</h6>
-                <div className='text-white-50 my-3 mb-5'>
+                <div className='text-white-50 my-3'>
                     <p style={{ fontSize: "1.2rem" }}>
                         Are you busy with your quest for knowledge, yet want to stay updated with the recent happenings in cyberspace? We bring to 
                         you the website that monitors all of MIST's activities and keeps track of their schedule ensuring you don't miss out on 

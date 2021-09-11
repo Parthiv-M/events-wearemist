@@ -46,6 +46,7 @@ const EventsPage = () => {
             setLoading(false);
         }
         fetchData();
+        window.scrollTo(0, 0);
     }, [type, page, SERVER_URL]);
     
     return (
@@ -144,7 +145,7 @@ const EventsPage = () => {
                                     })
                                 }
                             </div>
-                            <PaginationBlock pages={pages} current={page}/> 
+                            <PaginationBlock pages={pages} current={page} type={type}/> 
                         </>
                     }
                 </div>
