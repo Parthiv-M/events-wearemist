@@ -63,7 +63,7 @@ const EventsPage = () => {
                         <div className="row m-0 p-0">
                             <p className="text-white w-100 emphasis-heading" style={{ fontSize: "2.3rem" }}>{data[0].name}</p>
                             <div className="col-md-6 col-12 m-0 p-0">
-                                <img className="img-fluid w-full rounded" src={data[0].image} alt='abc'/>
+                                <img className="img-fluid w-100 rounded" src={data[0].image} alt='abc'/>
                             </div>
                             <div className="col-md-6 col-12 d-flex flex-column m-md-0 my-2 px-md-3 px-0">
                                 <p className="green-underline pb-1 font-weight-bold" style={{ width: "fit-content", fontSize: "1.5rem", color: "#6EE6B6" }}>
