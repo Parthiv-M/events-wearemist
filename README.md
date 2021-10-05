@@ -1,6 +1,6 @@
 # MIST Events Portal
 
-The Events portal for Manipal Information Security Team. Displays all events conducted by MIST, filtered according to upcoming and past events. Find the website [here](https://parthiv-m.github.io/events-wearemist/#/)
+The Events portal for Manipal Information Security Team featuring a new dark themed design and a responsive, clean UI. Displays all events conducted by MIST, filtered according to upcoming, ongoing, and past events. Find the website [here](https://events.wearemist.in)
 
 ## Tech Stack
 
