@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import EventCard from '../components/EventCard';
 import Footer from '../components/Footer';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Loader from '../components/Loader';
 import PaginationBlock from '../components/PaginationBlock';
 
@@ -60,6 +61,9 @@ const EventsPage = () => {
                 : 
                 <div className="" style={{ minHeight: "100vh" }}>
                     <div className="my-5 container w-100 p-4">
+                        <Link to="/">
+                            <button className="px-4 py-1 my-2 text-white" style={{ borderRadius: 10, backgroundColor: "transparent", border: "1px solid #6EE6B6" }}>Back</button>
+                        </Link>
                         <div className="row m-0 p-0">
                             <p className="text-white w-100 emphasis-heading" style={{ fontSize: "2.3rem" }}>{data[0].name}</p>
                             <div className="col-md-6 col-12 m-0 p-0">
@@ -102,9 +106,9 @@ const EventsPage = () => {
                             <div className="col-md-4">
                                 <p className="green-underline pb-1 font-weight-bold" style={{ width: "fit-content", fontSize: "1.5rem", color: "#6EE6B6" }}>Date and Time</p>
                                 <p className="text-white" style={{ fontSize: "1.2rem" }}>
-                                    {new Date(data[0].startDate).getHours()}:{new Date(data[0].startDate).getMinutes()}, {new Date(data[0].startDate).toDateString().split("").slice(4).join("")} 
+                                    {new Date(data[0].startDate).getHours()}:{parseInt(new Date(data[0].startDate).getMinutes()) === 0 ? "00" : new Date(data[0].startDate).getMinutes()}, {new Date(data[0].startDate).toDateString().split("").slice(4).join("")} 
                                     {" "}-{" "} 
-                                    {new Date(data[0].endDate).getHours()}:{new Date(data[0].endDate).getMinutes()}, {new Date(data[0].endDate).toDateString().split("").slice(4).join("")}
+                                    {new Date(data[0].endDate).getHours()}:{parseInt(new Date(data[0].endDate).getMinutes()) === 0 ? "00" : new Date(data[0].endDate).getMinutes()}, {new Date(data[0].endDate).toDateString().split("").slice(4).join("")}
                                 </p>
                             </div>
                             {
@@ -112,13 +116,13 @@ const EventsPage = () => {
                                 &&
                                 <div className="col-md-4">
                                     <p className="green-underline pb-1 font-weight-bold w-50" style={{ fontSize: "1.5rem", color: "#6EE6B6" }}>Speakers</p>
-                                    <p className="text-white" style={{ fontSize: "1.2rem" }}>
+                                    <div className="d-flex text-white flex-wrap" style={{ fontSize: "1.2rem" }}>
                                         {
                                             data[0].speakers.map((speaker, index) => {
-                                                return <p className="text-white">{speaker}</p>
+                                                return index !== data[0].speakers.length - 1 ? <p className="m-0" key={index}>{speaker},</p> : <p className="m-0" key={index}>{speaker}</p>
                                             })
                                         }
-                                    </p>
+                                    </div>
                                 </div>
                             }
                             {
