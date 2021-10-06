@@ -67,7 +67,7 @@ const Creators = () => {
 
     const cards = team.map((person, ind) => {
         return(
-          <div key={ind} className="col-md-3 mx-0 px-5 my-5">
+          <div key={ind} className="col-md-3 mx-0 px-md-5 px-1 my-4 my-md-5">
               <div className='d-flex flex-column justify-content-center align-items-center text-light'>
                   <img style={{ width:'80%', borderRadius:'50%' }} src={person.photo} alt={person.name} />
                   <div className="mt-3" style={{ fontSize: "1.5rem" }}>
