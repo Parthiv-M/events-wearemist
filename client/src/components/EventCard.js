@@ -85,7 +85,7 @@ const EventCard = (props) => {
                             </div>
                         </div>
                         {
-                            data.registerLink 
+                            props.type !== "past" && data.registerLink 
                             ? 
                             <div className="text-left m-0 w-25">
                                 <a href={data.registerLink} target="_blank" rel="noreferrer">

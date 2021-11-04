@@ -94,7 +94,7 @@ const EventsPage = () => {
                                     }
                                 </div>
                                 {
-                                    data[0].registerLink 
+                                    type !== "past" && data[0].registerLink 
                                     &&
                                     <a href={data[0].registerLink} target="_blank" rel="noreferrer">
                                         <p className="px-2 my-2" style={{ color: "#6EE6B6", fontSize: "1.4rem" }}>Register Now</p>
@@ -145,7 +145,7 @@ const EventsPage = () => {
                                 <h2 className="text-white text-center emphasis-heading blue-gradient-text my-5">Other {type.split("")[0].toUpperCase() + type.split("").slice(1).join("")} Events</h2>
                                 {
                                     data.slice(1, data.length).map((details) => {
-                                        return <EventCard data={details} key={details._id}/>       
+                                        return <EventCard data={details} type={type} key={details._id}/>       
                                     })
                                 }
                             </div>

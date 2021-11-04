@@ -68,7 +68,7 @@ const LandingPage = () => {
                             <h2 className="text-primary blue-gradient-text emphasis-heading mb-5">Upcoming Events</h2>
                             {
                                 upcoming.filter(val => !current.map(curr => curr._id).includes(val._id)).slice(0,3).map((event) => {
-                                    return <EventCard key={event._id} data={event}/>
+                                    return <EventCard key={event._id} type="upcoming" data={event}/>
                                 })
                             }
                             <Link to="/events/upcoming/0">
@@ -87,7 +87,7 @@ const LandingPage = () => {
                             <h2 className="text-primary blue-gradient-text emphasis-heading">Past Events</h2>
                             {
                                 past.filter(val => !current.map(curr => curr._id).includes(val._id)).slice(0,3).map((event) => {
-                                    return <EventCard key={event._id} data={event}/>
+                                    return <EventCard key={event._id} type="past" data={event}/>
                                 })
                             }
                             <Link to="/events/past/0">
