@@ -94,10 +94,10 @@ const EventCard = (props) => {
                             </div>
                             : ""
                         }
-                        <div className="d-flex flex-row my-3" style={{ fontSize: "1rem", }}>
+                        <div className="d-flex flex-row flex-wrap my-3" style={{ fontSize: "1rem", }}>
                         {
                             data.tags.map((tag, index) => {
-                                return <div key={index} className='m-1 px-2 my-auto' style={{ width: "fit-content", borderRadius:'50px', color: "#6EE6B6", border: "1px solid #6EE6B6" }}>
+                                return <div key={index} className='m-1 px-2 text-center' style={{ minWidth: "fit-content", borderRadius:'50px', color: "#6EE6B6", border: "1px solid #6EE6B6" }}>
                                     <p className="my-auto py-1">{tag}</p>
                                 </div>
                             })
